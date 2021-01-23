@@ -48,17 +48,17 @@
             drContainer.appendChild(newDiv);
         }
         var check = 0;
-        var oldX=0;
+        var oldX = 0;
         document.getElementById(0).style.opacity = "1";
         function mouseMove(event, y) {
-            var x = event.clientX;
+            var x = event.pageX;
             if (x > oldX) {
                 check++;
                 if (check > 35) {
                     check = 0;
                 }
 
-            } else if (x<oldX) {
+            } else if (x < oldX) {
                 check--;
                 if (check < 0) {
                     check = 35;
@@ -68,8 +68,8 @@
                 document.getElementById(i).style.opacity = "0";
             }
             document.getElementById(check).style.opacity = "1";
-            document.getElementById('xxx').innerHTML = 'true' + x + " " + y + " " + check;
-            oldX = event.clientX;
+            document.getElementById('xxx').innerHTML = 'true ' + x + " " + y + " " + check;
+            oldX = event.pageX;
         }
 
         document.getElementById('dr-container').addEventListener('mousedown', function (event) {
@@ -81,6 +81,15 @@
         document.getElementById('dr-container').addEventListener('mouseup', function (event) {
             document.getElementById('dr-container').onmousemove = null;
         });
+        document.getElementById('dr-container').addEventListener('touchstart', function (event) {
+            var y = event.pageX;
+            document.getElementById('dr-container').ontouchmove = function (event) {
+                mouseMove(event, y);
+            }
+        });
+        // document.getElementById('dr-container').addEventListener('touchend', function (event) {
+        //     document.getElementById('dr-container').ontouchmove = null;
+        // });
     </script>
     <script>
         // setInterval(()=>{
