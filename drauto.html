@@ -86,6 +86,9 @@
         <h2 id="xxx" style="color: white; position: absolute; top: 0; left: 0;">0</h2>
     </div>
     <script>
+        var check = 0;
+        var oldX = 0;
+        var oldX_mobile = 0;
         function runOnlyWhenLoaded() {
             for (var i = 0; i < 36; i++) {
                 var newDiv = document.createElement('div');
@@ -95,9 +98,7 @@
                 var drContainer = document.getElementById("dr-container");
                 drContainer.appendChild(newDiv);
             }
-            var check = 0;
-            var oldX = 0;
-            var oldX_mobile = 0;
+
             document.getElementById(0).style.opacity = "1";
             function mouseMove(event, y) {
                 var x = event.pageX;
@@ -164,16 +165,14 @@
                 document.getElementById('dr-container').ontouchmove = null;
             });
         }
-    </script>
-    <script>
-        setInterval(()=>{
+        setInterval(() => {
             check++;
-            if(check!=36){
+            if (check != 36) {
                 for (var i = 0; i < 36; i++) {
                     document.getElementById(i).style.opacity = "0";
                 }
                 document.getElementById(check).style.opacity = "1";
-            }else{
+            } else {
                 check = 0;
                 for (var i = 0; i < 36; i++) {
                     document.getElementById(i).style.opacity = "0";
@@ -181,6 +180,9 @@
                 document.getElementById(check).style.opacity = "1";
             }
         }, 40);
+    </script>
+    <script>
+
     </script>
 
 </body>
