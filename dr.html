@@ -95,6 +95,7 @@
         }
         var check = 0;
         var oldX = 0;
+        var oldX_mobile = 0;
         document.getElementById(0).style.opacity = "1";
         function mouseMove(event, y) {
             var x = event.pageX;
@@ -118,7 +119,30 @@
             document.getElementById('xxx').innerHTML = 'true ' + x + " " + y + " " + check;
             oldX = event.pageX;
         }
+        function touchMove(event, y) {
+                var x = event.pageX;
+                // var o= event.clientX;
+                var o = event.changedTouches[0].pageX;
+                if (x > oldX || o > oldX_mobile) {
+                    check++;
+                    if (check > 35) {
+                        check = 0;
+                    }
 
+                } else if (x < oldX || o < oldX_mobile) {
+                    check--;
+                    if (check < 0) {
+                        check = 35;
+                    }
+                }
+                for (var i = 0; i < 36; i++) {
+                    document.getElementById(i).style.opacity = "0";
+                }
+                document.getElementById(check).style.opacity = "1";
+                document.getElementById('xxx').innerHTML = 'true ' + x + " " + y + " " + check + o;
+                oldX = event.pageX;
+                oldX_mobile = event.changedTouches[0].pageX;
+            }
         document.getElementById('dr-container').addEventListener('mousedown', function (event) {
             var y = event.pageX;
             document.getElementById('dr-container').onmousemove = function (event) {
@@ -131,7 +155,7 @@
         document.getElementById('dr-container').addEventListener('touchstart', function (event) {
             var y = event.pageX;
             document.getElementById('dr-container').ontouchmove = function (event) {
-                mouseMove(event, y);
+                touchMove(event, y);
             }
         });
         document.getElementById('dr-container').addEventListener('touchend', function (event) {
@@ -139,21 +163,21 @@
         });
     </script>
     <script>
-        setInterval(()=>{
-            check++;
-            if(check!=36){
-                for (var i = 0; i < 36; i++) {
-                    document.getElementById(i).style.opacity = "0";
-                }
-                document.getElementById(check).style.opacity = "1";
-            }else{
-                check = 0;
-                for (var i = 0; i < 36; i++) {
-                    document.getElementById(i).style.opacity = "0";
-                }
-                document.getElementById(check).style.opacity = "1";
-            }
-        }, 40);
+        // setInterval(()=>{
+        //     check++;
+        //     if(check!=36){
+        //         for (var i = 0; i < 36; i++) {
+        //             document.getElementById(i).style.opacity = "0";
+        //         }
+        //         document.getElementById(check).style.opacity = "1";
+        //     }else{
+        //         check = 0;
+        //         for (var i = 0; i < 36; i++) {
+        //             document.getElementById(i).style.opacity = "0";
+        //         }
+        //         document.getElementById(check).style.opacity = "1";
+        //     }
+        // }, 40);
     </script>
 
 </body>
