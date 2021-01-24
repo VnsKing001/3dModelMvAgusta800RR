@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            /* background-size: cover; */
+            background-size: auto 100%;
+            transition: 0s linear;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.75);
+        }
+
+        .dr-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .dr-img {
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        @media screen and (max-width: 900px) {
+            .dr-img {
+                background-size: auto 70%;
+                background-position: center;
+            }
+        }
+
+        @media screen and (max-width: 635px) {
+            .dr-img {
+                background-size: auto 65%;
+                background-position: center;
+            }
+        }
+
+        @media screen and (max-width: 605px) {
+            .dr-img {
+                background-size: auto 60%;
+                background-position: center;
+            }
+        }
+
+        @media screen and (max-width: 560px) {
+            .dr-img {
+                background-size: auto 52%;
+                background-position: center;
+            }
+        }
+
+        @media screen and (max-width: 420px) {
+            .dr-img {
+                background-size: auto 45%;
+                background-position: center;
+            }
+        }
+        @media screen and (max-width: 413px) {
+            .dr-img {
+                background-size: contain;
+                background-position: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dr-container" id="dr-container">
+        <h2 id="xxx" style="color: white; position: absolute; top: 0; left: 0;">0</h2>
+    </div>
+    <script>
+        for (var i = 0; i < 36; i++) {
+            var newDiv = document.createElement('div');
+            newDiv.setAttribute("style", "background-image: url(./dragster800img/dragster800rr_" + i + ".png)");
+            newDiv.setAttribute("class", "dr-img");
+            newDiv.setAttribute("id", i);
+            var drContainer = document.getElementById("dr-container");
+            drContainer.appendChild(newDiv);
+        }
+        var check = 0;
+        var oldX = 0;
+        document.getElementById(0).style.opacity = "1";
+        function mouseMove(event, y) {
+            var x = event.pageX;
+            // var o= event.clientX;
+            if (x > oldX) {
+                check++;
+                if (check > 35) {
+                    check = 0;
+                }
+
+            } else if (x < oldX) {
+                check--;
+                if (check < 0) {
+                    check = 35;
+                }
+            }
+            for (var i = 0; i < 36; i++) {
+                document.getElementById(i).style.opacity = "0";
+            }
+            document.getElementById(check).style.opacity = "1";
+            document.getElementById('xxx').innerHTML = 'true ' + x + " " + y + " " + check;
+            oldX = event.pageX;
+        }
+
+        document.getElementById('dr-container').addEventListener('mousedown', function (event) {
+            var y = event.pageX;
+            document.getElementById('dr-container').onmousemove = function (event) {
+                mouseMove(event, y);
+            }
+        });
+        document.getElementById('dr-container').addEventListener('mouseup', function (event) {
+            document.getElementById('dr-container').onmousemove = null;
+        });
+        document.getElementById('dr-container').addEventListener('touchstart', function (event) {
+            var y = event.pageX;
+            document.getElementById('dr-container').ontouchmove = function (event) {
+                mouseMove(event, y);
+            }
+        });
+        document.getElementById('dr-container').addEventListener('touchend', function (event) {
+            document.getElementById('dr-container').ontouchmove = null;
+        });
+    </script>
+    <script>
+        // setInterval(()=>{
+        //     check++;
+        //     if(check!=36){
+        //         for (var i = 0; i < 36; i++) {
+        //             document.getElementById(i).style.opacity = "0";
+        //         }
+        //         document.getElementById(check).style.opacity = "1";
+        //     }else{
+        //         check = 0;
+        //         for (var i = 0; i < 36; i++) {
+        //             document.getElementById(i).style.opacity = "0";
+        //         }
+        //         document.getElementById(check).style.opacity = "1";
+        //     }
+        // }, 40);
+    </script>
+
+</body>
+
+</html>
