@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="mv-layout">
+        <div class="mv-tag">
+            <div class="mv-tag-container">
+                <div class="mv-preview">
+                    <div class="mv-pr-pop">
+                        <img src="./img/rush-pop.webp">
+                    </div>
+                    <div class="mv-pr-type">
+                        RUSH
+                    </div>
+                </div>
+                <div class="mv-tag-inf">
+                    <div class="mv-inf-type">
+                        <img src="./img/rush.svg">
+                    </div>
+                    <img src="./img/rush.webp">
+                </div>
+            </div>
+        </div>
+        <div class="mv-tag">
+            <div class="mv-tag-container">
+                <div class="mv-preview">
+                    <div class="mv-pr-pop">
+                        <img src="./img/brutale-pop.webp">
+                    </div>
+                    <div class="mv-pr-type">
+                        BRUTALE
+                    </div>
+                </div>
+                <div class="mv-tag-inf">
+                    <div class="mv-inf-type">
+                        <img src="./img/brutale.svg">
+                    </div>
+                    <img src="./img/brutale.webp">
+                </div>
+            </div>
+        </div>
+        <div class="mv-tag">
+            <div class="mv-tag-container">
+                <div class="mv-preview">
+                    <div class="mv-pr-pop">
+                        <img src="./img/dragster-pop.webp">
+                    </div>
+                    <div class="mv-pr-type">
+                        DRAGSTER
+                    </div>
+                </div>
+                <div class="mv-tag-inf">
+                    <div class="mv-inf-type">
+                        <img src="./img/dragster.svg">
+                    </div>
+                    <img src="./img/dragster.webp">
+                </div>
+            </div>
+        </div>
+        <div class="mv-tag">
+            <div class="mv-tag-container">
+                <div class="mv-preview">
+                    <div class="mv-pr-pop">
+                        <img src="./img/turismo-veloce-pop.webp">
+                    </div>
+                    <div class="mv-pr-type">
+                        TURISMO VELOCE
+                    </div>
+                </div>
+                <div class="mv-tag-inf">
+                    <div class="mv-inf-type">
+                        <img src="./img/turismo-veloce.svg">
+                    </div>
+                    <img src="./img/turismo-veloce.webp">
+                </div>
+            </div>
+        </div>
+        <div class="mv-tag">
+            <div class="mv-tag-container">
+                <div class="mv-preview">
+                    <div class="mv-pr-pop">
+                        <img src="./img/f3-pop.webp">
+                    </div>
+                    <div class="mv-pr-type">
+                        F3
+                    </div>
+                </div>
+                <div class="mv-tag-inf">
+                    <div class="mv-inf-type">
+                        <img src="./img/f3.svg">
+                    </div>
+                    <img src="./img/f3.webp">
+                </div>
+            </div>
+        </div>
+        <div class="mv-tag">
+            <div class="mv-tag-container">
+                <div class="mv-preview">
+                    <div class="mv-pr-pop">
+                        <img src="./img/superveloce-pop.webp">
+                    </div>
+                    <div class="mv-pr-type">
+                        SUPERVELOCE
+                    </div>
+                </div>
+                <div class="mv-tag-inf">
+                    <div class="mv-inf-type">
+                        <img src="./img/superveloce.svg">
+                    </div>
+                    <img src="./img/superveloce.webp">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="height: 1000px;"></div>
+    <script>
+        function TagHandleClick(i) {
+            clickedTag(i);
+        }
+        for (var i = 0; i < document.getElementsByClassName('mv-tag').length; i++) {
+            document.getElementsByClassName('mv-tag')[i].classList.add('mv-tag_notActive');
+            document.getElementsByClassName('mv-tag')[i].addEventListener('click', TagHandleClick.bind(event, i));
+        }
+        {
+            document.getElementsByClassName('mv-tag')[2].classList.add('mv-tag_active');
+            document.getElementsByClassName('mv-tag')[2].classList.remove('mv-tag_notActive');
+            document.getElementsByClassName('mv-preview')[2].classList.add('mv-preview_hidden');
+            document.getElementsByClassName('mv-tag-inf')[2].classList.add('mv-tag-inf_appear');
+        }
+        function clickedTag(key) {
+            for (var i = 0; i < document.getElementsByClassName('mv-tag').length; i++) {
+                document.getElementsByClassName('mv-tag')[i].classList.remove('mv-tag_active');
+                document.getElementsByClassName('mv-tag')[i].classList.add('mv-tag_notActive');
+                document.getElementsByClassName('mv-preview')[i].classList.remove('mv-preview_hidden');
+                document.getElementsByClassName('mv-tag-inf')[i].classList.remove('mv-tag-inf_appear');
+            }
+            document.getElementsByClassName('mv-tag')[key].classList.remove('mv-tag_notActive');
+            document.getElementsByClassName('mv-tag')[key].classList.add('mv-tag_active');
+            document.getElementsByClassName('mv-preview')[key].classList.add('mv-preview_hidden');
+            document.getElementsByClassName('mv-tag-inf')[key].classList.add('mv-tag-inf_appear');
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.25s ease;
+}
+
+body {
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.mv-layout {
+  width: 98%;
+  /* height: 110vh; */
+  height: calc((100vw - 40px) * 0.54);
+  max-height: 1400px;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.mv-tag {
+  position: relative;
+  background-color: #f1f1f1;
+  width: 11%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mv-tag_active {
+  width: 50%;
+}
+.mv-tag-container {
+  width: 100%;
+  background-color: inherit;
+  border-radius: 4px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-right: 7px solid #f1f1f1;
+  /* overflow: hidden; */
+  z-index: 1;
+}
+.mv-tag_notActive:hover .mv-tag-container {
+  width: 105%;
+  z-index: 10;
+}
+.mv-tag_notActive:last-child .mv-tag-container {
+  right: 7px;
+  left: auto;
+  border-left: 7px solid #f1f1f1;
+  border-right: none;
+}
+
+.mv-preview {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-color: white;
+  border-radius: 4px;
+  position: relative;
+}
+.mv-tag-inf {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.mv-tag-inf_appear {
+  opacity: 1;
+}
+
+/* --------------------------------------preview------------- */
+
+.mv-pr-pop {
+  width: 100%;
+  height: 25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.mv-pr-pop img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 250px;
+}
+
+.mv-pr-type {
+  position: absolute;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  left: 0;
+  bottom: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Bebas Neue", cursive;
+  /* font-family: "Open Sans", sans-serif; */
+  font-weight: 800;
+  font-size: 60px;
+}
+
+/* -------------inf-------tag ---------------*/
+
+.mv-tag-inf > img {
+  height: 90%;
+  /* max-width: 100%; */
+  min-width: auto;
+  width: auto;
+  position: absolute;
+  right: -21.6%;
+  top: 0;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.mv-inf-type {
+  width: 100%;
+  height: 11%;
+  display: flex;
+  align-items: center;
+  padding-left: 8%;
+}
+.mv-inf-type img {
+  background-position: center;
+}
+
+img{
+  opacity: 1;
+  transition: myOpacity 300ms;
+}
+@keyframes myOpacity{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
