@@ -175,7 +175,7 @@ body {
   /* margin-top: 3vw; */
   position: absolute;
   height: calc(100vw * 0.5) !important;
-  max-height: 500px !important;
+  max-height: 460px !important;
 }
 .motor-infor {
   /* top: -3vw; */
