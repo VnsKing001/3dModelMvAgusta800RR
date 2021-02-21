@@ -40,7 +40,7 @@ body {
   list-style: none;
   color: black;
   color: rgba(19, 20, 21, 0.3);
-  font-size: 45px;
+  font-size: calc(10vw * 0.25);
   font-family: "Anton", Arial, Helvetica, sans-serif;
 }
 .mv-nav-desktop,
@@ -72,13 +72,13 @@ body {
   left: -100vw;
 }
 .mv-nav-desktop ul ul li {
-  height: calc(10vh + 1px);
   background-color: white;
   transition: height 0.1s ease;
   opacity: 1;
 }
 .mv-nav-desktop li:hover > ul > li {
-  height: calc(10vh + 1px);
+  height: calc(5vw + -2px);
+  min-height: 66px;
   position: initial;
   opacity: 1;
   z-index: 100;
@@ -91,7 +91,9 @@ body {
   top: 0;
 }
 .mv-nav-desktop ul ul li {
-  width: 25vw;
+  height: calc(5vw + -2px);
+  min-height: 67px;
+  /* width: 25vw; */
   font-size: 1rem;
   display: flex;
   justify-content: flex-start;
@@ -113,10 +115,14 @@ body {
   position: initial !important;
 }
 .motor-infor {
-  width: 48vw !important;
-  height: calc(100vw * 0.5) !important;
-  max-height: calc(500px - 40px) !important;
+  width: 47vw !important;
   position: absolute !important;
+  /* height: calc(40.7vw + -1px) !important;
+    min-height: 67px !important;
+    max-height: 460px !important; */
+  height: calc(29.3vw + -1px) !important;
+  min-height: 396px !important;
+  max-height: 460px !important;
 }
 .mv-nav-desktop > ul > li {
   transform: translateY(5px);
@@ -147,12 +153,6 @@ body {
   z-index: 100 !important;
   left: 0 !important;
 }
-/* .mv-nav-item__active_default,
-.mv-nav-item__active_default
-  .motor-name-layout-active
-  .motor-name-pc:first-child {
-  background-color: aqua !important;
-} */
 .mv-nav-item__active_default > a {
   color: black !important;
 }
@@ -168,17 +168,10 @@ body {
   .motor-infor-layout {
   left: 0 !important;
 }
-/* .mv-nav-type-pc:first-child {
-  margin-top: 3vw;
-} */
 .mv-nav-type-pc .motor-name-layout {
-  /* margin-top: 3vw; */
   position: absolute;
   height: calc(100vw * 0.5) !important;
   max-height: 460px !important;
-}
-.motor-infor {
-  /* top: -3vw; */
 }
 .mv-nav-desktop .mv-nav-type-layout .mv-nav-type-pc:hover > a {
   color: black !important;
@@ -195,8 +188,10 @@ body {
 .mv-nav-type-layout::after {
   content: "";
   width: 98vw;
-  height: calc(100vw * 0.5) !important;
+  height: calc(40.7vw + -1px);
+  min-height: 67px;
   max-height: 460px !important;
+  background-color: aqua;
   background-color: white;
   position: absolute;
   top: 0;
@@ -206,11 +201,88 @@ body {
   border-bottom-right-radius: 4px;
 }
 .mv-nav-type-pc {
-  border-right: 2px solid aqua !important;
+  border-right: 2px solid #e0e0e0 !important;
 }
 .motor-infor {
-  border-left: 2px solid aqua !important;
+  border-left: 2px solid #e0e0e0 !important;
 }
-.motor-infor , .mv-nav-type-layout {
-  border-radius: 4px;
+.motor-infor,
+.mv-nav-type-layout {
+  border-bottom-right-radius: 4px;
+}
+.mv-nav-type-pc {
+  width: 30vw;
+}
+.motor-name-pc {
+  width: 21vw;
+}
+.mv-nav-type-pc > a {
+  display: flex !important;
+  width: 100%;
+  height: 100%;
+  position: relative !important;
+  align-items: center;
+}
+.mv-nav-type-pc > a > img {
+  position: absolute;
+  right: 0;
+}
+.motor-infor {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.motor-infor-lt {
+  width: 98%;
+  height: 100%;
+  /* background-color: #f1f1f1; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+.motor-if-lt * {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+.motor-if-lt p {
+  font-size: calc(5vw * 0.25);
+  font-weight: 200;
+}
+.motor-if-lt {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.mt-if-money {
+  display: block;
+}
+.mt-if-money p {
+  padding-top: 10px;
+}
+.mt-if-money span {
+  display: inline-block;
+}
+.mt-if-tech-lt {
+  display: flex;
+  justify-content: flex-end;
+}
+.motor-if-tech {
+  display: block;
+  margin-left: calc(2vw * 0.9);
+}
+.motor-if-tech Strong {
+  font-family: "Anton", Arial, Helvetica, sans-serif;
+  font-size: calc(10vw * 0.25);
+  font-weight: 200;
+}
+.motor-if-tech p {
+  padding-top: 5px;
 }
