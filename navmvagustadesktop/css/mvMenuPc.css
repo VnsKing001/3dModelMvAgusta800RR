@@ -17,6 +17,7 @@ body {
   background-color: white;
   height: 64px;
   margin-top: 20px;
+  border-bottom: 2px solid green;
 }
 .mv-nav-desktop::after {
   content: "";
@@ -173,11 +174,7 @@ body {
   .motor-infor-layout {
   left: 0 !important;
 }
-.mv-nav-type-pc:first-child {
-  margin-top: 3vw;
-}
 .mv-nav-type-pc .motor-name-layout {
-  margin-top: 3vw;
   position: absolute;
   height: calc(100vw * 0.5) !important;
   max-height: 500px !important;
