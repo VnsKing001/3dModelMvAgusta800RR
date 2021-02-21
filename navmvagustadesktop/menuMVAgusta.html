@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mvMenuPc.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    
+
+
+    <nav class="mv-nav-desktop">
+        <ul>
+            <li class="mv-nav-left" class="open-product"><a>Motorcycles</a>
+                <ul class="mv-nav-type-layout">
+                    <li class="mv-nav-type-pc"><a>RUSH</a>
+                        <ul class="motor-name-layout">
+                            <li class="motor-name-pc"><a href="">1000</a>
+                                <ul class="motor-infor-layout">
+                                    <li class="motor-infor"><h4>IMG RUSH 1000</h4></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mv-nav-type-pc"><a>BRUTALE</a>
+                        <ul class="motor-name-layout">
+                            <li class="motor-name-pc"><a href="">800 RR</a>
+                                <ul class="motor-infor-layout">
+                                    <li class="motor-infor"><h4>IMG BRUTALE 800 RR</h4></li>
+                                </ul>
+                            </li>
+                            <li class="motor-name-pc"><a href="">800 RR SCS</a>
+                                <ul class="motor-infor-layout">
+                                    <li class="motor-infor"><h4>IMG BRUTALE 800 RR SCS</h4></li>
+                                </ul>
+                            </li>
+                            <li class="motor-name-pc"><a href="">1000 RR</a>
+                                <ul class="motor-infor-layout">
+                                    <li class="motor-infor"><h4>IMG BRUTALE 800 RR</h4></li>
+                                </ul>
+                            </li>
+                            <li class="motor-name-pc"><a href="">1000 RR SERIE ORO</a>
+                                <ul class="motor-infor-layout">
+                                    <li class="motor-infor"><h4>IMG BRUTALE 1000 SERIE ORO</h4></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mv-nav-type-pc"><a>DRAGSTER</a>
+                        <ul class="motor-name-layout">
+                            <li class="motor-name-pc"><a href="">Dragster 800 RR SCS</a>
+                                <ul class="motor-infor-layout">
+                                    <li class="motor-infor"><h4>IMG DRAGSTER 800 RR SCS</h4></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mv-nav-type-pc"><a>TURISMO VELOCE</a>
+                        <ul class="motor-name-layout">
+                            <li class="motor-name-pc"><a href="">Turismo Veloce</a>
+                                <ul class="motor-infor-layout">
+                                    <li class="motor-infor"><h4>IMG TV</h4></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mv-nav-type-pc"><a>F3</a>
+                        <ul class="motor-name-layout">
+                            <li class="motor-name-pc"><a href="">f3</a>
+                                <ul class="motor-infor-layout">
+                                    <li class="motor-infor"><h4>IMG F3</h4></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mv-nav-type-pc"><a>SUPERVELOCE</a>
+                        <ul class="motor-name-layout">
+                            <li class="motor-name-pc"><a href="">sp</a>
+                                <ul class="motor-infor-layout">
+                                    <li class="motor-infor"><h4>IMG SL V</h4></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="mv-nav-left"><a>Ownership</a></li>
+            <li class="mv-nav-right"><a>Company</a></li>
+            <li class="mv-nav-right"><a>Dealer</a></li>
+            <li class="mv-nav-right"><a>Store</a></li>
+            <li class="mv-nav-right"><a>EN</a></li>
+        </ul>
+    </nav>
+    <div style="text-align: center; height: 400px; display: flex; justify-content: center; flex-direction: column;">
+        <h1>Demo MV Nav Desktop layout</h1>
+        <h3>Phiên bản chỉ mới thiết kế cho layout nav dành cho Sản Phẩm motor, các Nav còn lại sẽ dần hoàn thiện....</h3>
+        <h3>Nav Chỉ sử dụng trong phạm vi > 990px width vì đây là layout thiết kế cho Desktop, layout cho mobile sẽ hoàn
+            thành và depoloy riêng.!</h3>
+        <Strong style="color:#ffc107; font-size: 30px;">@Bản quyền code: VnsKing</Strong>
+    </div>
+        <!-- <style>
+            button{
+                padding: 15px 25px;
+                border: 2px solid #ffc107;
+                background: linear-gradient(to up,transparent 50%, #ffc107 50%) ;
+                background-size: 200%;
+                background-position: left;
+                color: #fff;
+                font-size: 20px;
+                letter-spacing: 1px;
+                cursor: pointer;
+            }
+            button:hover{
+                background-position: right;
+                transition: .5s;
+                color: #000;
+            }
+        </style>
+        <button>
+            Register now to know more
+        </button> -->
+    </div>
+    <!-- <script src="js/navMvPc.js"></script> -->
+    <script>
+        document
+            .getElementsByClassName("mv-nav-type-pc")[0]
+            .classList.add("mv-nav-item__active_default");
+        document
+            .getElementsByClassName("motor-name-layout")[0]
+            .classList.add("motor-name-layout-active");
+        document
+            .getElementsByClassName("mv-nav-desktop")[0]
+            .addEventListener("mouseout", addItem_Active_Default);
+
+        function changeItem_Active(i) {
+            for (
+                var key = 0;
+                key < document.getElementsByClassName("mv-nav-type-pc").length;
+                key++
+            ) {
+                document
+                    .getElementsByClassName("mv-nav-type-pc")
+                [key].classList.remove("mv-nav-item__active_default");
+                document
+                    .getElementsByClassName("motor-name-layout")
+                [key].classList.remove("motor-name-layout-active");
+            }
+            document
+                .getElementsByClassName("mv-nav-type-pc")
+            [i].classList.add("mv-nav-item__active_default");
+            document
+                .getElementsByClassName("motor-name-layout")
+            [i].classList.add("motor-name-layout-active");
+        }
+        for (
+            var i = 0;
+            i < document.getElementsByClassName("mv-nav-type-pc").length;
+            i++
+        ) {
+            document
+                .getElementsByClassName("mv-nav-type-pc")
+            [i].addEventListener("mouseover", changeItem_Active.bind(event, i), false);
+            // document.getElementsByClassName("mv-nav-type-pc")[i].addEventListener("mouseout", )
+        }
+
+        function addItem_Active_Default() {
+            for (
+                var key = 0;
+                key < document.getElementsByClassName("mv-nav-type-pc").length;
+                key++
+            ) {
+                document
+                    .getElementsByClassName("mv-nav-type-pc")
+                [key].classList.remove("mv-nav-item__active_default");
+                document
+                    .getElementsByClassName("motor-name-layout")
+                [key].classList.remove("motor-name-layout-active");
+            }
+            document
+                .getElementsByClassName("mv-nav-type-pc")[0]
+                .classList.add("mv-nav-item__active_default");
+            document
+                .getElementsByClassName("motor-name-layout")[0]
+                .classList.add("motor-name-layout-active");
+        }
+        // nếu mouseout cái typemotor sẽ vẫn hiện cái vị trí đã chọn motor và hiện layout menu.....reset lại chỉ khi đã mouseour cái nav desktop
+        for (
+            var i = 0;
+            i < document.getElementsByClassName("motor-name-pc").length;
+            i++
+        ) {
+            document
+                .getElementsByClassName("motor-name-pc")
+            [i].addEventListener(
+                "mouseover",
+                refuseItem_Active.bind(event, i),
+                true
+            );
+            document
+                .getElementsByClassName("motor-name-pc")
+            [i].addEventListener(
+                "mouseout",
+                addItem_Active.bind(event, i),
+                true
+            );
+        }
+        function refuseItem_Active(i) {
+            for (
+                var key = 0;
+                key < document.getElementsByClassName("motor-name-layout").length;
+                key++
+            ) {
+                document.getElementsByClassName("motor-name-layout")[key].classList.add("motor-name-layout-refuse")
+            }
+            console.log("name" + i);
+        }
+        function addItem_Active(i){
+            for (
+                var key = 0;
+                key < document.getElementsByClassName("motor-name-layout").length;
+                key++
+            ) {
+                document.getElementsByClassName("motor-name-layout")[key].classList.remove("motor-name-layout-refuse")
+            }
+        }
+
+    </script>
+</body>
+
+</html>
