@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rocket</title>
+    <link rel="stylesheet" href="css/a.css">
+    <script src="js/a.js"></script>
+</head>
+
+<body>
+    <div class="scene">
+        <div class="rocket" id="rocket" onmousedown="aonmousedown();" onmouseup="onmouseup()">
+            <img src="img/spaceshipRainbow.png">
+        </div>
+    </div>
+    <script>
+        // document.addEventListener("mousemove", function (e) {
+        //     var rocket = document.querySelector('.rocket');
+        //     rocket.style.left = e.offsetX + 'px';
+        //     rocket.style.top = e.offsetY + 'px';
+        // })
+        var x = document.getElementById("rocket");
+        function moveStar(e) {
+            var rocket = document.querySelector(".rocket");
+            rocket.style.left = e.offsetX + "px";
+            rocket.style.top = e.offsetY + "px";
+        }
+        document.addEventListener("mousedown", function(e){
+            document.addEventListener("mousemove", function (e) {
+                moveStar(e);
+            })
+        })
+        function stars() {
+            let count = 50;
+            let scene = document.querySelector('.scene');
+            let i = 0;
+            while (i < count) {
+                let star = document.createElement('i');
+                let x = Math.floor(Math.random() * window.innerWidth);
+                let duration = Math.random() * 2;
+                let h = Math.random() * 100;
+
+                star.style.left = x + "px";
+                star.style.width = 2 + "px";
+                star.style.height = 10 + h + "px";
+                star.style.animationDuration = 0.3 + duration + "s";
+                scene.appendChild(star);
+                i++;
+            }
+        }
+        function stars2() {
+            let count = 50;
+            let scene = document.querySelector('.scene');
+            let i = 0;
+            while (i < count) {
+                let star = document.createElement('i');
+                let x = Math.floor(Math.random() * window.innerWidth);
+                let duration = Math.random() * 2;
+
+                star.style.left = x + "px";
+                star.style.width = 2 + "px";
+                star.style.height = 2 + "px";
+                star.style.animationDuration = 0.5 + duration + "s";
+                scene.appendChild(star);
+                i++;
+            }
+        }
+        stars2();
+        stars();
+
+    </script>
+</body>
+
+</html>

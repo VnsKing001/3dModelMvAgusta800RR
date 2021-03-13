@@ -1,0 +1,70 @@
+.oh{
+    /* height: 300px !important; */
+    /* height: 600px !important; */
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-image: url(../img/oh.jpg);
+}
+.assistant{
+    margin-top: 18px;
+    height: 780px;
+    background-image: url(../img/background.jpg);
+    /* border-top: 10px solid  #b69539; */
+    /* border: 10px solid black; */
+}
+.assistant-form{
+    position: relative;
+    width: 1200px;
+    height: 780px;
+    margin: 0 159px
+
+}
+.assistant-inner{
+    position: absolute;
+    background-color: rgba(1, 173, 230, 0.7);
+    width: 200px;
+    height: 100%;
+}
+.assistant-desc{
+    width: 368px;
+    height: 80%;
+    padding: 88px 0;
+    margin-left: 35px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.assistant-header{
+    font-size: 45px;
+    color: aliceblue;
+}
+.assistant-button{
+    background-image: url(https://www.mvagusta.com/o/mv-agusta-theme/images/pic/promo-block-divider.png);
+    padding-top: 40px;
+    background-repeat: no-repeat;
+    width: 254px;
+}
+.assistant-button a{
+    background: #fff;
+    color: #01ade6;
+    border-radius: 19px;
+    width: 254px;
+    line-height: 38px;
+    display: block;
+    text-transform: uppercase;
+    border-radius: 19px;
+    font-weight: 750;
+    font-size: 18px;
+    transition: all .5s;
+    font-style: normal;
+
+}
+.assistant-button a:hover{
+    color: black;
+    transition: all .5s;
+}

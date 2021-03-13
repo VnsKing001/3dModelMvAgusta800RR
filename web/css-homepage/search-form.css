@@ -1,0 +1,192 @@
+.motor-search-nav {
+  background: radial-gradient(circle at top left, #3c3223 0%, #1a1a1a 70%);
+  width: 40vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  transform: translateX(100vw);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: -3px 0px 5px 0px #3c3223;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.4s ease-out;
+}
+.motor-search-form {
+  margin-top: 10vh;
+  border-radius: 5px;
+  width: 95%;
+  height: 43px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 101;
+}
+.motor-search-container {
+  width: 85%;
+  height: 100%;
+  border-radius: 5px;
+  border: 2px solid #b69539;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.search-input-layout {
+  padding-left: 18px;
+  font-size: 20px;
+  margin: 0;
+  width: 70%;
+  height: 95%;
+  outline: none;
+  border: none;
+}
+.search-motor-image {
+  margin-left: 10px;
+  background-image: url(../img/search-clicked.png);
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: auto;
+  z-index: 101;
+}
+
+.svg-background {
+  width: 40vw;
+  height: 100vh;
+  position: absolute;
+}
+.svg-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.svg-bg {
+  background-color: white;
+  width: 100%;
+  height: 23vh;
+  z-index: -1;
+  border-bottom-right-radius: 50%;
+  border-bottom: 13px solid #b69539;
+}
+.svg-body {
+  padding-top: 10px;
+  height: 76vh;
+  width: 97%;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  /* background: linear-gradient(rgba(0,0,0,0.05),
+                                      rgba(0,0,0,0.35)); */
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
+  overflow-x: hidden;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  align-items: center;
+}
+.svg-body::-webkit-scrollbar {
+  cursor: pointer;
+  width: 7px;
+}
+.svg-body::-webkit-scrollbar-track {
+  background: black;
+}
+.svg-body::-webkit-scrollbar-thumb {
+  background: white;
+}
+.close-search-nav {
+  position: absolute;
+  top: 3vh;
+  right: 2vw;
+  width: 36px;
+  height: 36px;
+  background-image: url(../img/close-js-hover.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 101;
+  cursor: pointer;
+}
+.close-search-nav:hover {
+  background-image: url(../img/closeHover.png);
+}
+.content-admin {
+  position: absolute;
+  height: 15px;
+  bottom: 0;
+  width: 100%;
+  background-color: #b69539;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+.content-admin p {
+  margin-right: 25px;
+  color: #3c3223;
+  font-weight: 550;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.mv-object-container {
+  width: 90%;
+  height: 125px;
+  background-color: white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  border-right: 6px solid #b69539;
+  border-left: 2px solid #b69539;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0;
+  padding-left: 5px;
+  margin-bottom: 15px
+}
+.mv-product-img{
+  box-sizing: border-box;
+  border: 1px solid black;
+  background-color: white;
+  height: 118px;
+  width: 118px;
+}
+.mv-product-content{
+  width: 70%;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  padding-left: 15px;   
+}
+.mv-product-content-infor{
+  width: 95%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.mv-pr-header{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #b69539;
+  letter-spacing: .5px;
+  
+}
+.mv-pr-context{
+  padding-top: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: gray;
+}

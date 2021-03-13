@@ -1,0 +1,66 @@
+.mark-section-layout{
+    margin-top: 75px;
+    width: 876px;
+    height: 925px;
+    /* border: 1px solid black; */
+    float: right;
+}
+.mark-section-layout .mark-section-image{
+    background-image: url(../img/DRA-SCS-performance-min.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 102%;
+    transition: 0.5s linear;
+}
+.section-image{
+    background-image: url(../img/mask-imagewithtabs.svg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scaleX(-1);
+}
+.content-box{
+    top: +267.5px;
+    position: relative;
+    width: 100%;
+    left: +45px;
+    z-index: 9;
+}
+.mark-section-content-box{
+    margin-left: 25px;
+    width: 600px;
+    min-width: 300px;
+    height: 1000px;
+    
+}
+#mark-section-heading{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: #a27b3e;
+    transition: 0.5s linear;
+}
+.mark-section-content{
+    display: block;
+    width: 500px;
+    font-weight: lighter;
+    /* font-family: "Avenir LT",sans-serif; */
+    font-size: 23px;
+    transition: 0.5s linear;
+}
+.mark-section-node{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #a27b3e;
+    border-radius: 50%;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.mark-section-node:hover{
+    width: 25px;
+    border-radius: 20px;
+    
+}

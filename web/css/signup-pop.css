@@ -1,0 +1,160 @@
+.sign-up-popup {
+  overflow: hidden;
+  opacity: 0;
+  /* display: none; */
+  float: right;
+  position: relative;
+  width: 350px;
+  height: 500px;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  top: -28px;
+  right: +75px;
+  /* border-bottom-left-radius: 15px; */
+  /* border-bottom-right-radius: 15px; */
+  border-radius: 15px;
+  border: 2px solid hsla(54, 100%, 50%, 0.8);
+  box-shadow: 5px 5px 15px 5px hsla(54, 100%, 50%, 0.5);
+  transition: 0.5s;
+}
+.register-pop-up,
+.login-pop-up {
+  height: 100%;
+  width: 100%;
+  /* background-color: aqua; */
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  /* float: left; */
+  position: absolute;
+  transition: 0.35s;
+}
+.login-pop-up {
+  left: +350px;
+}
+.register-pop-up,
+.login-pop-up {
+  /* opacity: 0; */
+  transition: 0.35s;
+}
+.register-title,
+.login-title {
+  /* opacity: 0; */
+  color: hsla(54, 100%, 50%, 0.9);
+  margin-top: 50px;
+  width: 100%;
+  /* height: 20%; */
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 225%;
+  transition: 0.35s;
+}
+.register-box,
+.login-box {
+  margin-top: 20px;
+  /* opacity: 0; */
+  transition: 0.35s;
+  width: 100%;
+  height: 55%;
+}
+.left-register-box,
+.login-box {
+  font-family: Arial, Helvetica, sans-serif;
+  color: hsla(54, 100%, 50%, 0.9);
+  text-align: left;
+  font-size: 115%;
+  font-weight: 700;
+  width: 40%;
+  display: inline-block;
+}
+.left-register-box div,
+.login-box label {
+  margin-left: 20px;
+  margin-top: 37px;
+}
+.left-register-box div:first-child,
+.left-login-box div:first-child {
+  margin-top: 50px;
+}
+.right-register-box,
+.right-login-box {
+  display: inline-block;
+  width: 57%;
+  height: 100%;
+}
+.right-register-box input {
+  width: 166px;
+  height: 24px;
+  margin-top: 35px;
+  font-size: 110%;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.register-button-box,
+.login-button-box {
+  height: 15%;
+  width: 100%;
+}
+.register-button-box input,
+.login-button-box input {
+  -webkit-appearance: none;
+  margin-top: 25px;
+  height: 35px;
+  width: 125px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: hsla(54, 100%, 50%, 0.9);
+  font-size: 115%;
+  border-radius: 40px;
+  border: 2px solid hsla(54, 100%, 50%, 1);
+  margin-left: 32px;
+  cursor: pointer;
+  text-align: center;
+  padding: 0px;
+  transition: all 0.25s ease-out;
+  font-weight: 700;
+  outline: none;
+}
+.register-button-box input:hover,
+.login-button-box input:hover {
+  color: black;
+  background-color: hsla(54, 100%, 50%, 1);
+}
+
+/* ------------login------------- */
+.login-box form {
+  margin-top: 40px;
+  width: 350px;
+}
+.login-box label {
+  display: inline-block;
+}
+.login-box input {
+  display: inline-block;
+  width: 166px;
+  height: 24px;
+  margin-top: 35px;
+  font-size: 110%;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.95);
+  margin-left: 20px;
+}
+.password-login-input {
+  margin-left: 30px;
+}
+.login-box .remind-change-password {
+  width: 175px;
+  color: rgba(255, 255, 255, 0.95);
+  margin-top: 25px;
+  margin-left: 20px;
+  font-size: 80%;
+  cursor: pointer;
+}
+.remind-change-password:hover{
+  text-decoration: underline;
+}
+.remind-change-password a{
+  text-decoration: none;
+}
+.remind-change-password a:visited{
+    color: rgba(255, 255, 255, 0);
+}

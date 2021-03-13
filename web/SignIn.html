@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mv-Login</title>
+    <link rel="stylesheet" href="loginCss/login.css">
+    <link rel="stylesheet" href="loginCss/loginResponsive.css">
+    <link rel="stylesheet" href="loginCss/effect.css">
+    <link rel="stylesheet" href="loginCss/socialForm.css">
+    <!-- <link rel="stylesheet" href="loginCss/mvLogo.css"> -->
+    <script src="loginJs/loginUser.js"></script>
+</head>
+
+<body>
+    <div id="float-size"></div>
+    <div class="bg-image" id="bg-image"></div>
+
+    <div class="login-container" id="login-container">
+        <!-- <div class="mv-logo-top"></div>
+        <div class="mv-logo-bottom"></div> -->
+        <div class="form-container" id="form-container">
+            <form class="sign-in-container" id="sign-in-container">
+                <div class="sign-in-title-container">
+                    <h2>MV-Login</h2>
+                </div>
+                <div class="sign-in-input-form">
+                    <div for="userNameLogin">User Name</div>
+                    <input type="text" name="userNameLogin" placeholder="UserName...">
+
+                    <div for="passwordLogin">Password</div>
+                    <input type="password" name="passwordLogin" placeholder="Password...">
+                    <a onclick="toForgotAccountForm()">Forgot your password, click here!</a>
+                </div>
+                <div class="sign-in-button">
+                    <input type="submit" class="" value="Login"></input>
+                    <input type="button" class="" value="To Register" onclick="toLogin();"></input>
+                </div>
+            </form>
+            <form class="sign-up-container" id="sign-up-container">
+                <div class="sign-up-title-container">
+                    <h2>MV-Register</h2>
+                </div>
+                <div class="sign-up-input-form">
+                    <div for="userNameRegister">User Name</div>
+                    <input type="text" name="userNameRegister" placeholder="UserName...">
+                    <div for="emailRegister">Email</div>
+                    <input type="email" name="emailRegister" placeholder="Email...">
+                    <div for="passwordRegister">Password</div>
+                    <input type="password" name="passwordRegister" placeholder="Password...">
+                </div>
+                <div class="sign-up-button">
+                    <input type="submit" class="" value="Register"></input>
+                    <input type="button" class="" value="To Login" onclick="toRegister();"></input>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="forgot-account-container" id="forgot-account-container" style="top: -1000px;">
+        <!-- <div class="mv-logo-top"></div>
+        <div class="mv-logo-bottom"></div> -->
+        <form action="">
+            <div class="forgot-account-title-container">
+                <h2>MV-Reset Account</h2>
+            </div>
+            <div class="forgot-account-input-form">
+                <div for="userNameForgotAccount">User Name</div>
+                <input type="text" name="userNameForgotAccount" placeholder="User Name...">
+                <div for="emailForgotAccount">Email</div>
+                <input type="email" name="emailForgotAccount" placeholder="Email...">
+                <div for="verificationCode">Verification Code</div>
+                <input type="text" name="verificationCode" placeholder="Type here...">
+            </div>
+            <div class="forgot-account-button">
+                <input type="submit" class="" value="Reset Account"></input>
+                <input type="button" class="" value="Back to Login" onclick="toLoginForm()"></input>
+            </div>
+        </form>
+    </div>
+
+    <p id="fix-bug-group-copyright"><span style="color: white; font-size: 115%;">* </span>This is the product of <span
+            style="color: white">Fix-bug Group</span>. Do not commercialized in any way without consent of <span
+            style="color: white"> Us</span> !</p>
+    
+    
+    
+    <div class="social-network-form">
+        <img class="social-img" src="./img/instagram.png" width="40px" height="40px"><br>
+        <img class="social-img" src="./img/facebook.png" width="40px" height="40px"><br>
+        <img class="social-img" src="./img/youtube.png" width="40px" height="40px"><br>
+        <img class="social-img" src="./img/twitter.png" width="40px" height="40px"><br>
+    
+    
+    
+    </div>
+    <script>
+        function effect() {
+            let count = 20;
+            let scene = document.getElementById("bg-image");
+            let i = 0;
+            while (i < count) {
+                let effect = document.createElement('i');
+                let x = Math.floor(Math.random() * window.innerHeight - 10);
+                let duration = Math.random() * 2;
+                let heigh = Math.random() * 100;
+
+                effect.style.top = x + "px";
+                effect.style.width = heigh + "px";
+                effect.style.height = 3 + "px";
+                effect.style.animationDuration = 1.4 + duration + "s";
+                scene.appendChild(effect);
+                i++;
+            }
+        }
+        effect();
+    </script>
+</body>
+
+</html>

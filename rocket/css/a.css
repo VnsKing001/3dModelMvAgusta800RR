@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* -webkit-user-select: none; */
+    /* transition: 0.1s linear; */
+}
+body{
+    background-color: black;
+}
+.scene{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items:center;
+}
+.scene .rocket{
+    position: absolute;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-50%);
+}
+img{
+    /* z-index: 1000; */
+    background-color: black;
+}
+.scene i{
+    position: absolute;
+    top:-100px;
+    background: rgb(31, 156, 160);
+    animation: animateStars linear infinite;
+}
+i:nth-child(even){
+    background: rgb(158, 160, 31);
+}
+@keyframes animateStars{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(200vh);
+    }
+}
+i {
+  position: relative;
+  width: 300px; 
+  height: 173.21px;
+  background-color: #64C7CC;
+  margin: 86.60px 0;
+}

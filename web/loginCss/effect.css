@@ -1,0 +1,32 @@
+.bg-image i {
+  background-color: rgba(226, 1, 2, 0.5);
+  position: absolute;
+  animation: effect linear infinite;
+  opacity: 0.5;
+}
+@keyframes effect {
+  0% {
+    transform: translateX(70vw);
+  }
+  100% {
+    transform: translateX(-200vw);
+  }
+}
+/* #float-size{
+    z-index: 1;
+    position: absolute;
+    height: 100vh;
+    width: 40vw;
+    background-color: white;
+    background: white;
+} */
+#fix-bug-group-copyright {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  right: 23px;
+  color: red;
+  font-size: 90%;
+  font-weight: 500;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

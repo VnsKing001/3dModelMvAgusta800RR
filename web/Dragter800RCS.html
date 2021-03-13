@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+    <!--choose 1 of 2 choices about font awesome-->
+    <link rel="stylesheet" href="css/horizol-vertical-navbar.css">
+    <link rel="stylesheet" href="css/search-field.css">
+    <link rel="stylesheet" href="css/WebDemo.css">
+    <link rel="stylesheet" href="css/banner-notification.css">
+    <link rel="stylesheet" href="css/more-information.css">
+    <link rel="stylesheet" href="css/body-contents.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/body-contents-backup.css">
+    <link rel="stylesheet" href="css/section-content-box.css">
+    <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/break.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/end-footer.css">
+    <link rel="stylesheet" href="css/signup-pop.css">
+    <link rel="stylesheet" href="css/message-container.css">
+    <link rel="stylesheet" href="css/sign-out-pop.css">
+
+    <link rel="stylesheet" href="cssReponsive/background_res.css">
+    <!-- <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="clientSv.js"></script> -->
+
+    <script src="js/message-event.js" defer></script>
+    <script src="js/WebDemo.js" defer></script>
+    <script src="js/scroll.js" defer></script>
+    <script src="js/sign-up-popup.js" defer></script>
+    <script src="js/signOutPopUp.js"></script>
+    <script src="js/userClient.js"></script>
+</head>
+
+<body id="body">
+    <!-- <div class="loading-scene" id="loading-scene">
+        <div class="loading-box">Test Loading Animation</div>
+    </div> -->
+    <nav class="background" id="background">
+        <!--nav horizol-->
+        <div class="skew1"></div>
+        <div class="skew2"></div>
+        <div class="nav-bar">
+            <div class="nav-logo">🆅🅽🆂🅺🅸🅽🅶</div>
+            <div class="nav-link">
+                <ul class="nav-row">
+                    <li><a href="http://google.com" class="nav-item" target="_blank">HOME</a></li>
+                    <li><a href="#" class="nav-item" target="_blank">ABOUT</a></li>
+                    <li><a href="#" class="nav-item">CONTRACT</a></li>
+                </ul>
+                <input type="button" class="button" onclick="signUp_appear(); resetPosRegLog();" value="SIGN UP"
+                    id="sign-up-txt"></input>
+            </div>
+        </div>
+        <div class="sign-up-popup" id="sign-up-popup">
+            <form Visibility action="http://localhost:5000/add-user" method="POST" style="display: none;" id="axx">
+                <div class="register-pop-up" id="register-pop-up">
+                    <div class="register-title">𝐌𝐕-𝐑𝐄𝐆𝐈𝐒𝐓𝐄𝐑</div>
+                    <div class="register-box">
+                        <div class="left-register-box">
+                            <div>
+                                <p>User Name</p>
+                            </div>
+                            <div>
+                                <p>Email</p>
+                            </div>
+                            <div>
+                                <p>Password</p>
+                            </div>
+                            <div>
+                                <p>Repassword</p>
+                            </div>
+                        </div>
+                        <div class="right-register-box">
+                            <input type="text" name="user_name" required="" value="" placeholder=""
+                                autocomplete="given-name" id="userNameSignup">
+                            <input type="email" name="user_email" multiple id="emailSignup">
+                            <input type="password" name="user_password" required="" value="" placeholder=""
+                                autocomplete="given-name" id="passwordSignup">
+                            <input type="password" name="user_repassword" required="" value="" placeholder=""
+                                autocomplete="given-name" id="rePasswordSignup">
+                        </div>
+                    </div>
+                    <div class="register-button-box">
+                        <input type="submit" value="Register" onclick="alertInfoRegister()"></input>
+                        <input type="button" value="To Login" onclick="toLoginForm()"></input>
+                    </div>
+            </form>
+        </div>
+        <form class="login-pop-up" id="login-pop-up" action="http://localhost:5000/user-login" method="POST">
+            <div class="login-title">𝐌𝐕-𝐋𝐎𝐆𝐈𝐍</div>
+            <div class="login-box" style="width: 100%;">
+                <!-- <form action=""> -->
+                <label for="user_name">User Name</label>
+                <input id="userNameSignin" type="text" name="user_name_login" value="" placeholder=""
+                    autocomplete="given-name" required="">
+                <label for="user_password">Password</label>
+                <input id="userPasswordSignin" class="password-login-input" type="password" name="user_password_login"
+                    value="" placeholder="" required="" style="margin-left: 30px;">
+                <div class="remind-change-password" onclick="changePassword()">
+                    <a href="http://facebook.com" target="_blank">Forget your password?</a>
+                </div>
+                <!-- </form> -->
+            </div>
+            <div class="login-button-box">
+                <input type="submit" value="Login" onclick="alertInfoLogin()"></input>
+                <input type="button" value="To Register" onclick="toRegisterForm()"></input>
+            </div>
+        </form>
+        </div><!-- unknown div ah fuck-->
+        <form action="http://localhost:5000/sign-out">
+            <div class="sign-out-pop-up" id="sign-out-pop-up">
+
+                <input type="button" class="user-button" value="My Information"></input>
+                <input type="button" class="user-button" value="Change Account" onclick="changeAccountPopup();"></input>
+                <input type="submit" class="user-button" value="Sign Out"></input>
+
+            </div>
+        </form>
+        <div class="banner">
+            <h1 class="banner-title"><span>𝒟</span>RAGSTER 800 RR</h1>
+            <p class="banner-content"><span class="yellow-content">Super compact, aggressive, stunningly good
+                    looking.</span>
+                The design of the Dragster 800 RR takes no prisoners. Emotion in its purest form.</p>
+            <button type="button" class="button  explore"><a href="https://www.mvagusta.com/en/dragster-800-rr"
+                    target="_blank">EXPLORE</a></button>
+        </div>
+        <div class="notification">
+            <div class="landscape"></div>
+            <div class="notification-img"></div>
+        </div>
+    </nav>
+    <nav class="vertical-navbar" id="black-vertical-navbar">
+        <div class="search-icon">
+            <!-- <a href="#"><i class="fa fa-th-list"></i></a> -->
+            <a href="SignUp.html" target="_blank"><i class="fa fa-signal"></i></a>
+            <a href="#"><i class="fa fa-search search-big" onclick="openSearch()"></i></a>
+            <div class="search-field" id="search">
+                <input type="text" name="search" id="sh" required placeholder="Enter your search">
+                <button type="button"><i class="fa fa-search search-small" aria-hidden="true"></i></button></a>
+            </div>
+        </div>
+        <div class="setting-icon" id="yellow-setting-icon">
+            <div class="setting-box">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/mvagustamotor" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://vnskingmotor.github.io/motor.html" target="_blank" class="circle"><i
+                        class="fa fa-circle-o-notch"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="copyright" id="copyright">
+    </div>
+    <div class="open-more" onclick="openMore()">
+        <i class="fa fa-angle-double-down" id="angle-down"></i>
+        &nbsp
+        <a href="#open-more-field" id="open-close-content">CLICK HEAR FOR MORE INFORMATIONS</a>
+    </div>
+    <a href="#background" id="angle-top" onclick="toTop()"><i class="fa fa-angle-double-down" id="top-angle-icon"
+            style="z-index: -1;"></i></a>
+    <div class="body" id="open-more-field">
+
+        <!-- <img src="./img/D3_RRMY20_B_0004.png"> -->
+        <div class="model-information" id="model-information">
+            <!-- <div class="model-information-underline"></div>
+            <div class="model-information-box"></div> -->
+            <div><a href="#"><i class="fa fa-th-list" style="color:#b69539;"></i></a></div>
+            <div><a href="https://www.mvagusta.com/en/dragster-800-rr" target="_blank"><img src="./img/mv-logo.png"></a>
+            </div>
+            <div><a href="#open-more-field">CONCEPT</a></div>
+            <div><a href="#mark-section-content-box">PERFORMENT</a></div>
+            <div><a href="#aaa">GALLERY</a></div>
+            <div><a href="#bbb">ORDER</a></div>
+
+        </div>
+        <section class="color-after" id="color-after">
+            <div class="image-top" id="image-top"></div>
+            <div class="mask-header"></div>
+        </section>
+        <section class="node-layout">
+            <a class="node-circle" onclick="yellowMv()"></a>
+            <a class="node-circle" onclick="greenMv()"></a>
+        </section>
+        <section class="mark-section-form">
+            <div class="mark-section-layout">
+                <div class="mark-section-image" id="mark-section-image">
+                    <div class="section-image"></div>
+                </div>
+            </div>
+            <div class="mark-section-content-box" id="mark-section-content-box">
+                <div class="content-box">
+                    <p id="mark-section-heading">EMOTIONS<br>WITHOUT<br>COMPROMISE</p>
+                    <p class="mark-section-content" id="mark-section-content">Super compact, aggressive, stunningly good
+                        looking. The design of the Dragster 800 RR takes no prisoners. Emotion in its purest form.</p>
+                    <a class="mark-section-node" id="mark-section-nodef" onclick="contentf()"></a>
+                    <a class="mark-section-node" id="mark-section-nodes" onclick="contentse()"></a>
+                    <a class="mark-section-node" id="mark-section-nodet" onclick="contentth()"></a>
+                    <a class="mark-section-node" id="mark-section-nodefth" onclick="contentfth()"></a>
+                </div>
+            </div>
+        </section>
+        <br id="aaa">
+        <br>
+        <br">
+            <br">
+                <br>
+                <br>
+                <div class="slideshow-Form">
+                    <!-- <div class="left-to-slide-icon" id="left-to-slide-icon">
+            </div> -->
+                    <form class="slidershow middle" id="slidershow">
+                        <div class="slides" id="slides" var="1">
+                            <input type="radio" class="a" name="r" id="r1" checked onclick="checkRadio(1)">
+                            <input type="radio" class="a" name="r" id="r2" onclick="checkRadio(2)">
+                            <input type="radio" class="a" name="r" id="r3" onclick="checkRadio(3)">
+                            <input type="radio" class="a" name="r" id="r4" onclick="checkRadio(4)">
+                            <input type="radio" class="a" name="r" id="r5" onclick="checkRadio(5)">
+
+
+
+
+                            <div class="slifff s1">
+                                <div class="slide">
+                                    <img src="img/a.jpg">
+                                </div>
+                                <div class="slide">
+                                    <img src="img/e.jpg">
+                                </div>
+                                <div class="slide">
+                                    <img src="img/c.jpg">
+                                </div>
+                                <div class="slide">
+                                    <img src="img/d.jpg">
+                                </div>
+                                <div class="slide">
+                                    <img src="img/b.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navigation">
+                            <label for="r1" class="bar" id="a1">
+
+                            </label>
+                            <label for="r2" class="bar">
+
+                            </label>
+                            <label for="r3" class="bar">
+
+                            </label>
+                            <label for="r4" class="bar">
+
+                            </label>
+                            <label for="r5" class="bar">
+
+                            </label>
+                        </div>
+                    </form>
+
+                    <!-- <div class="right-to-slide-icon" id="right-to-slide-icon" onclick="toRightSlide()">
+            </div> -->
+
+                </div>
+                <br id="bbb">
+                <br>
+                <div class="break-bottom" id="break-bottom">
+                </div>
+                <div class="enroll-layout">
+                    <div class="enroll-box">
+                        <h4>RESERVE NOW YOUR DRAGSTER 800 RR</h4>
+                        <p class="enroll-content">Fill in the fields below to register and be contacted by one of our
+                            authorized
+                            dealers. You’ll be able to order the bike
+                            of your dreams soon and join the MV Agusta family. Make sure you enter all the mandatory
+                            fields in
+                            order to complete the
+                            procedure.</p>
+                        <div class="content-enroll-box">
+                            <label class="content-enroll">
+                                <span class="content-enroll-text">FIRST NAME*</span>
+                            </label>
+                            <div class="value-box">
+                                <input type="text" name="firstname" required="" value="" placeholder=""
+                                    autocomplete="given-name">
+                            </div>
+                            <div class="warning-box">
+                                <div class="warning-content">PLEASE COMPLETE THIS required FIELD</div>
+                            </div>
+                        </div>
+                        <div class="content-enroll-box">
+                            <label class="content-enroll">
+                                <span class="content-enroll-text">LAST NAME*</span>
+                            </label>
+                            <div class="value-box">
+                                <input type="text" name="firstname" required="" value="" placeholder=""
+                                    autocomplete="given-name">
+                            </div>
+                            <div class="warning-box">
+                                <div class="warning-content">PLEASE COMPLETE THIS required FIELD</div>
+                            </div>
+                        </div>
+                        <div class="content-enroll-box">
+                            <label class="content-enroll">
+                                <span class="content-enroll-text">EMAIL*</span>
+                            </label>
+                            <div class="value-box">
+                                <input type="text" name="firstname" required="" value="" placeholder=""
+                                    autocomplete="given-name">
+                            </div>
+                            <div class="warning-box">
+                                <div class="warning-content">PLEASE COMPLETE THIS required FIELD</div>
+                            </div>
+                        </div>
+                        <div class="content-enroll-box">
+                            <label class="content-enroll">
+                                <span class="content-enroll-text">PHONE NUMBER*</span>
+                            </label>
+                            <div class="value-box">
+                                <input type="text" name="firstname" required="" value="" placeholder=""
+                                    autocomplete="given-name">
+                            </div>
+                            <div class="warning-box">
+                                <div class="warning-content">PLEASE COMPLETE THIS required FIELD</div>
+                            </div>
+                        </div>
+                        <div class="content-enroll-box">
+                            <label class="content-enroll">
+                                <span class="content-enroll-text">SELECT YOUR MASTER*</span>
+                            </label>
+                            <div class="value-box">
+                                <select name="" id="seclect-country">
+                                    <option value="" disabled="" selected="">Please Select</option>
+                                    <option>VNS-KING</option>
+                                    <option>ROXAS TAN</option>
+                                    <option>SUPHU-LY</option>
+                                </select>
+                                <!-- <input type="text" name="firstname" required="" value="" placeholder="" autocomplete="given-name"> -->
+                            </div>
+                            <div class="warning-box">
+                                <div class="warning-content">PLEASE COMPLETE THIS required FIELD</div>
+                            </div>
+                        </div>
+                        <div class="content-enroll-box">
+                            <label class="content-enroll">
+                                <span class="content-enroll-text">ZIP CODE*</span>
+                            </label>
+                            <div class="value-box">
+                                <input type="text" name="firstname" required="" value="" placeholder=""
+                                    autocomplete="given-name">
+                            </div>
+                            <div class="warning-box">
+                                <div class="warning-content">PLEASE COMPLETE THIS required FIELD</div>
+                            </div>
+                        </div>
+                        <div class="content-enroll-box">
+                            <label class="content-enroll">
+                                <span class="content-enroll-text">CHOOSE THE COLOR FOR YOUR MOTORBIKE*</span>
+                            </label>
+                            <div class="value-box">
+                                <select name="" id="seclect-country">
+                                    <option value="" disabled="" selected="">Please Select</option>
+                                    <option>NIGHT GREY/SOLAR BEAM/METALLIC CARBON BLACK</option>
+                                    <option>ICE PEARL WHITE/NEON GREEN/METALLIC CARBON BLACK</option>
+                                </select>
+                            </div>
+                            <div class="warning-box">
+                                <div class="warning-content">PLEASE COMPLETE THIS required FIELD</div>
+                            </div>
+                        </div>
+
+                        <label>
+                            <div class="check-box">
+                                <input type="checkbox">
+                                <span>I AGREE TO THE <a href="#">PRIVACY NOTICE*</a></span>
+                            </div>
+                            <div class="check-box">
+                                <input type="checkbox">
+                                <span>I AGREE TO THE PROCESSING FOR MARKETING PURPOSES - PURPOSE B.1 OF THE PRIVACY
+                                    NOTICE</span>
+                            </div>
+                            <div class="check-box">
+                                <input type="checkbox">
+                                <span>I AGREE TO THE PROCESSING FOR PROFILING PURPOSES - PURPOSE B.2 OF THE PRIVACY
+                                    NOTICE</span>
+                            </div>
+                        </label>
+                        <div class="submit-layout">
+                            <!-- <div class="submit-box"> -->
+                            <input type="submit" value="SUBMIT">
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div id="footer">
+                    <div class="footer-image">
+                        <section class="heading-footer">
+                            <h3>GET IN TOUCH</h3>
+                            <p>TAKE THE NEXT STEP TO REACH YOUR DREAM</p>
+                        </section>
+
+                        <div class="contract-image">
+                            <section class="left-contact">
+                                <div class="left-img">
+                                    <img src="./img/maps-and-location.png" alt="">
+                                </div>
+                                <h5>Find a dealer</h5>
+                                <p>and reserve a Test Drive to feel the emotion of riding a MV Agusta</p>
+                            </section>
+                            <section class="right-contact">
+                                <div class="right-img">
+                                    <img src="./img/business.png" alt="">
+                                </div>
+                                <h5>CONTACT US</h5>
+                                <p>to get more information about our models</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="break-bottom" id="break-bottom1"></div>
+                <div class="end-copyright">
+                    <div class="end-copyright-box">
+                        <div class="end-section-img-box"><img src="./img/mv-logo.png"></div>
+                        <div class="flex-box">
+                            <div class="end-section end-section-left">
+                                <h5>NEWSLETTER</h5>
+                                <p>Subscribe to our Newsletter and download the exclusive wallpaper for your computer
+                                    and
+                                    smartphone!</p>
+                                <p class="pp"><a href="#">SUBSCRIBE NOW</a></p>
+                                <p class="pp"><a href="#">SPRING UPGRADE DISCLAIMER</a></p>
+                            </div>
+                            <div class="end-section end-section-center">
+                                <div class="center-first-box">
+                                    <img src="./img/motul-logo.jpg" alt="#">
+                                    <p>MV Agusta<br> recommends Motul</p>
+                                </div>
+                                <div class="center-second-box">
+                                    <p>® 2020 MV AGUSTA Motor S.p.A<br> P.IVA e C.F. 02324190129<br> Iscritta al
+                                        Registro delle
+                                        Imprese di Varese
+                                        REA-247420<br> Cap. Soc. I. V. Euro 1.000.000<br> Soggetta a direzione e
+                                        coordinamento
+                                        del Socio Unico Gi.Ti.R
+                                        S.A.<br> Sede legale in Varese, 21100, Loc. Schiranna, Via G. Macchi 144</p>
+                                    <br>
+                                    <p style="font-weight: 700; font-size: 12.5px;">Thanks Mv-Agusta Motorsport for
+                                        helping me
+                                        alots</p>
+                                </div>
+                            </div>
+                            <div class="end-section end-section-right">
+                                <div class="icon-end">
+                                    <i class="fa fa-instagram"></i>
+                                    <i class="fa fa-facebook"></i>
+                                    <i class="fa fa-youtube-play"></i>
+                                    <i class="fa fa-vimeo"></i>
+                                </div>
+                                <div class="right-end-content">
+                                    <p><a href="#">PRIVACY AND LEGAL</a></p><br>
+                                    <p><a href="#">COOKIE SETTINGS</a></p><br>
+                                    <p><a href="#">PRIVACY NOTICE</a></p><br>
+                                    <p><a href="#">RMI</a></p><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    <div class="message-container" id="message-container">
+        <div class="content-backup" id="content-backup" onclick="openMessage()">
+            <p>Chat with us. We are online!</p>
+        </div>
+        <div class="message-box" id="message-box">
+            <div class="message-title-box">
+                <div class="ad-container" id="ad-container">
+                    <div id="ad-icon"></div>
+                    <div id="ad-name">
+                        <p>Vns-King</p>
+                    </div>
+                </div>
+                <img id="close-icon" class="close-icon" src="./img/close-circle.png" alt="close"
+                    onclick="closeMessage()">
+            </div>
+            <div class="message-body-box">
+                <div class="chat-history-container" id="chat-history-container">
+                    <div id="chat-message-from-admin">
+                        <p>Hello User, I'm King. If you got problem, please tell us! We very kind to help you out.</p>
+                    </div>
+                    <div id="chat-message-example-from-user" onclick="chatResponse1()">
+                        <p>I want to know more information about Mv Agusta Company.</p>
+                    </div>
+                    <div id="chat-message-example-from-user" onclick="chatResponse2()">
+                        <p>I can't order your product, please check and feed back to me!</p>
+                    </div>
+                </div>
+                <div class="chat-container">
+                    <form action="">
+                        <input type="text" id="chat-content" placeholder="Enter your feed back here..."
+                            autocomplete="off">
+                        <input type="submit" id="submit-chat-content" value="">
+                    </form>
+                </div>
+            </div>
+            <div class="message-footer-box">
+                <p style="text-align: right; padding-right: 10px; color: rgb(1, 159, 255);">___ VnsKing ___</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        if (document.getElementById("r1").checked == true) {
+            document.getElementsByClassName("bar")[0].style.background = "rgba(255, 255, 255, 0.9)";
+        }
+        function checkRadio(r) {
+            for (var i = 0; i < 5; i++) {
+                // if (document.getElementById("r" + (i + 1)).checked == true) {
+                document.getElementsByClassName("bar")[i].style.background = "none";
+                // }
+            }
+            document.getElementsByClassName("bar")[r - 1].style.background = " rgba(255, 255, 255, 0.9)"
+        }
+
+
+    </script>
+</body>
+
+</html>

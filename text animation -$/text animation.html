@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+    <link rel="stylesheet" href="css/text animation.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>WELCOME TO MY WORLD</h1>
+    </div>
+    <div class="welcome-section content-hidden">
+        <div class="content-wrap">
+            <ul class="fly-in-text">
+                <li>V</li>
+                <li>N</li>
+                <li>S</li>
+                <li>K</li>
+                <li>I</li>
+                <li>N</li>
+                <li>G</li>
+            </ul>
+            <a href="#" class="enter-button">ENTER</a>
+        </div>
+    </div>
+<script>
+    $(function(){
+        var welcomeSection = $('.welcome-section'), 
+        enterButton = welcomeSection.find('.enter-button'); 
+        setTimeout(function(){
+            welcomeSection.removeClass('content-hidden');
+        }, 800);
+        enterButton.on('click', function(e){
+            e.preventDefault();
+            welcomeSection.addBack('content-hidden').fadeOut();
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flutter</title>
+    <!-- <link rel="stylesheet" href="css/flutter.css"> -->
+    <style>
+        :root{
+    --mv-brown: #b69539;
+    --mv-blur: #ece8e1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--mv-brown);
+  transition: 0.5s ease;
+  outline: none;
+}
+body {
+  background-color: slategrey;
+  scroll-behavior: smooth;
+}
+.boder-layout {
+  width: 350px;
+  height: 620px;
+  background-color: rgb(176, 178, 180);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: 4px solid black;
+  border-radius: 25px;
+  top: 50%;
+  left: 50%;
+  box-shadow: 10px 10px 10px rgb(49, 49, 49);
+  overflow: hidden;
+}
+#form-container {
+  width: 200%;
+  height: 100%;
+  position: relative;
+  flex-direction: row;
+  display: flex;
+  transition: 0.5s ease-in-out;
+}
+
+.regKH-form,
+.login-form {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  position: relative;
+}
+.title-login{
+    width: 100%;
+    height: 20%;
+}
+.title-kh-reg{
+    width: 100%;
+    height: 15%;
+}
+.title-login h2{
+    text-align:center;
+    line-height: 160px;
+    font-size: 40px;
+}
+.title-kh-reg h2{
+    text-align:center;
+    line-height: 100px;
+    font-weight: 700;
+    font-size: 36px;
+}
+.content-login,.content-kh-reg{
+    height: 55%;
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    /* background-color: aquamarine; */
+    /* z-index: ; */
+}
+.content-kh-reg{
+    height: 70%;
+    /* background-color: aqua; */
+}
+.content-login div,
+.content-login input,
+.content-login select{
+    font-size: 110%;
+    width: 80%;
+    height: 28px;
+    margin-left: 8%;
+}
+.content-kh-reg div,
+.content-kh-reg input{
+    font-size: 105%;
+    width: 80%;
+    height: 28px;
+    margin-left: 8%;
+}
+.content-kh-reg input{
+    border-bottom: 0px solid var(--mv-brown);
+    border-left: 3px solid var(--mv-brown);
+    border-right: 0px solid var(--mv-brown);
+    border-top: 0px solid var(--mv-brown);
+    border-radius: 5px;
+    background-color: var(--mv-blur);
+    padding-left: 10px;
+}
+.content-kh-reg div{
+    font-size: 102%;
+    font-weight: 550;
+    padding-top: 5px;
+    margin-left: 9%;
+}
+.content-login div{
+    font-weight: 550;
+    /* margin-left: 40px; */
+    padding-top: 20px;
+}
+.content-login div:first-child{
+    padding-top: 40px;
+}
+.content-login input, .content-login select{
+    padding-left: 10px;
+    height: 30px;
+    border: 0px solid black;
+    border-radius: 8px;
+    background-color: var(--mv-blur);
+}
+.content-login select{
+    width: 45%;
+    border: 0px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.content-login a{
+    font-size: 90%;
+    padding-top: 12px;
+    display: block;
+    font-weight: 400;
+    margin-left: 8%;
+    line-height: 28px;
+    color: black;
+    text-decoration: none;
+    cursor: text;
+    /* z-index: 0; */
+}
+.content-login span{
+    cursor: pointer;
+    color: #b69539;
+}
+.content-login span:hover{
+    color: blue;
+}
+.content-login span:active{
+    color: rebeccapurple;
+}
+.login-button{
+    height: 10%;
+    width: 100%;
+    /* background-color: rebeccapurple; */
+    position: relative;
+}
+.login-button input{
+    margin-top: 15px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    height: 50px;
+    width: 175px;
+    border: 1.9999px solid var(--mv-brown);
+    border-radius: 25px;
+    font-size: 25px;
+    font-weight:700;
+    cursor: pointer;
+}
+.login-button input:hover, .hkreg-button input:nth-child(2):hover{
+    background-color: var(--mv-brown);
+    color:white;
+}
+.hkreg-button{
+    height: 12%;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+}
+.khreg-button input{
+    margin-top: 10px;
+    width: 140px;
+    height: 48px;
+    border: 2px solid var(--mv-brown);
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: white;
+    font-weight: 700;
+    font-size: 110%;
+    margin-left: 6%;
+}
+.khreg-button input:first-child{
+    border:none;
+    color:black;
+    font-weight: 520;
+    font-size: 95%;
+}
+.khreg-button input:first-child:hover{
+    color: blue;
+}
+.khreg-button input:first-child:active{
+    color: rebeccapurple;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="boder-layout">
+        <form action="" id="form-container">
+            <div class="login-form">
+                <div class="title-login">
+                    <h2>-LOGIN-</h2>
+                </div>
+                <div class="content-login">
+                    <div for="UserName">Tên Đăng Nhập</div>
+                    <input type="text" name="userNameLogin" placeholder="UserName...">
+                    <div for="passwordLogin">Mật Khẩu</div>
+                    <input type="password" name="passwordLogin" placeholder="Password...">
+                    <div for="quyen">Hình Thức Đăng Nhập</div>
+                    <select name="quyen" id="quyen">
+                        <option value="1">Quản trị</option>
+                        <option value="2">Nhà cung cấp</option>
+                        <option value="3">Nhân viên</option>
+                        <option value="4">Khách hàng</option>
+                    </select>
+                    <a onclick="toForgotAccountForm()">Quên mật khẩu? <span> Click vào đây.</span></a>
+                    <a class="to-reg" value="To Register">Chưa có tài khoản,<span onclick="toRegister();"> Đăng kí tại
+                            đây.</span></a>
+                </div>
+                <div class="login-button">
+                    <input type="submit" class="" value="Login"></input>
+                </div>
+            </div>
+            <div class="regKH-form">
+                <div class="title-kh-reg">
+                    <h2>-KH-REGISTER-</h2>
+                </div>
+                <div class="content-kh-reg">
+                    <div for="UserName-khreg">Tên Đăng Nhập</div>
+                    <input type="text" name="UserName-khreg" placeholder="UserName...">
+                    <div for="Email-reg">Email</div>
+                    <input type="text" name="Email-reg" placeholder="Email...">
+                    <div for="password-khreg">Mật Khẩu</div>
+                    <input type="password" name="password-khreg" placeholder="Password...">
+                    <div for="ten">Tên Đầy Đủ</div>
+                    <input type="text" name="ten" placeholder="Name...">
+                    <div for="ten">Tên Viết Tắt</div>
+                    <input type="text" name="ten" placeholder="Short Name...">
+                    <div for="diachi">Địa Chỉ</div>
+                    <input type="text" name="diachi" placeholder="Address...">
+                    <div for="sdt">Số Điện Thoại</div>
+                    <input type="text" name="sdt" placeholder="Phone Number...">
+                </div>
+                <div class="khreg-button">
+                    <input type="button" class="" value="Trở Về Đăng Nhập" onclick="toLogin();"></input>
+                    <input type="submit" class="" value="Register"></input>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        function toRegister() {
+            document.getElementById("form-container").style.transform =
+                "translateX(-50%)";
+        }
+        function toLogin() {
+            document.getElementById("form-container").style.transform =
+                "translateX(0)";
+        }
+    </script>
+</body>
+
+</html>

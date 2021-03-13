@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>motor</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/motor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo">Motor</h2>
+        <ul>
+            <li><a href="https://sites.google.com/view/vnskingducatiblog/homepage?authuser=2" target="blank">Home</a></li>
+            <li><a href="https://sites.google.com/view/vnskingducatiblog/models?authuser=2" target="blank">Colection</a></li>
+            <li><a href="https://sites.google.com/view/vnskingducatiblog/suits-helmets?authuser=2" target="blank"> Helmets & Suits</a></li>
+            <li><a href="https://sites.google.com/view/vnskingducatiblog/test-track?authuser=2" target="blank">Test Track</a></li>
+            <li><a href="https://sites.google.com/view/vnskingducatiblog/contact-admin-vns-king?authuser=2" target="blank">Contact</a></li>
+        </ul>
+        <div class="search">
+            
+                <input type="text" name="search" id="sh" required placeholder="Enter your search">
+                <button type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="slides">
+                <img src="./image/ducati_v4.jpg" alt="">
+                <div class="content">
+                    <h2>Ducati V4</h2>
+                    <p>New Superleggera V4 
+                    234hp on 152.2kg with racing kit. A record power to weight ratio completed by the GP16 extreme aerodynamic design.
+                    Discover the new Ducati V4
+                    </p>
+                    <a href="https://superleggerav4.ducati.com/?_ga=2.149865334.196295435.1585797247-790708615.1581344445" target="_blank">Explore &#8594</a>
+                </div>
+            </div>
+            <div class="slides">
+                <img src="./image/ducati_1199.jpg" alt="">
+                <div class="content">
+                    <h2>Ducati Panigale 1199</h2>
+                    <p>Specifications. At the time of its release <strong>Ducati</strong> claimed that the <strong>1199 Panigale</strong> was the world's most powerful production twin-cylinder engine motorcycle, with 195 bhp (145 kW) at 10,750 rpm, and 133.0 N⋅m (98.1 lb⋅ft) torque at 9000 rpm on an engine test stand.
+                    </p>
+                    <a href="https://www.autotrader.ca/motorcycle-research/Ducati/1199-Panigale/2018/" target="_blank">Explore &#8594</a>
+                </div>
+            </div>
+            <div class="slides">
+                <img src="./image/Ducati_StreetFigter.jpg" alt="">
+                <div class="content">
+                    <h2>Ducati Streetfighter</h2>
+                    <p><strong>The Panigale V4</strong>, stripped of its fairings and with high, wide handlebars. This, in short, is the underlying concept of
+                    the new Streetfighter V4, a bike that magnifies the thrill of the ride every time it takes to the road.
+                    </p>
+                    <a href="https://www.ducati.com/us/en/bikes/streetfighter/streetfighter-v4" target="_blank">Explore &#8594</a>
+                </div>
+            </div>
+            <div class="slides">
+                <img src="./image/328758.jpg" alt="">
+                <div class="content">
+                    <h2>BMW S1000RR</h2>
+                    <p><strong>S1000RR</strong> is a race oriented sport bike initially made by BMW Motorrad to compete in the 2009 Superbike World
+                    Championship, that is now in commercial production. It was introduced in Munich in April 2008, and is powered by a 999
+                    cc (61.0 cu in) four-cylinder engine redlined at 14,200 rpm.
+                    </p>
+                    <a href="https://www.bikewale.com/bmw-bikes/s1000rr-2018/" target="_blank">Explore &#8594</a>
+                </div>
+            </div>
+        </div>
+        <!-- slide small -->
+        <div class="slides-small">
+            <div class="thumb effect">
+                <!-- <img src="./image/ducati_v4.jpg" alt=""> -->
+                <!-- <i class="fa fa-bookmark"></i> -->
+            </div>
+            <div class="thumb">
+                <!-- <img src="./image/unnamed.png" alt=""> -->
+                <!-- <i class="fa fa-bookmark"></i> -->
+            </div>
+            <div class="thumb">
+                <!-- <img src="./image/suzuki-logo-5311518DD9-seeklogo.com.png" alt=""> -->
+                <!-- <i class="fa fa-bookmark"></i> -->
+            </div>
+            <div class="thumb">
+                <!-- <img src="./image/lamborghini-logo.png" alt=""> -->
+                <!-- <i class="fa fa-bookmark"></i> -->
+            </div>
+        </div>
+        <!-- next & previous button -->
+        <a href="#" class="prev">&#171</a>
+        <a href="#" class="next">&#187</a>
+
+        <!-- dot/ circle nav -->
+        <div class="nav">
+            <span class="dot active">1</span>
+            <span class="dot">2</span>
+            <span class="dot">3</span>
+            <span class="dot">4</span>
+        </div>
+    </section>
+
+    <script>
+        const next = document.querySelector('.next');
+        const prev = document.querySelector('.prev');
+        const dots = document.querySelectorAll('.dot');
+        const slide = document.querySelectorAll('.slides');
+        let index = 1;
+        function show(n){
+            if(n>slide.length){index = 1}
+            if(n<1){index = slide.length};
+            let i;
+            for(i=0; i<slide.length; i++){
+                slide[i].style.transform = `translateX(0)`;
+                slide[i].className = slide[i].className.replace(" fade", " ");
+            } 
+            slide[index-1].style.transform = `translateX(-${(index-1)*100}%)`;
+            slide[index-1].className += " fade";
+            // dot
+            for(i=0; i<dots.length; i++){
+                dots[i].className = dots[i].className.replace(" active", " ");
+            }
+            dots[index-1].className += " active";
+        }        
+        next.addEventListener('click', ()=>{
+                show(index += 1);
+                thumb[1].classList.add('effect');
+                setTimeout(()=>{
+                    next_small_slide();
+                }, 0);
+                
+            });
+        prev.addEventListener('click', ()=>{
+                show(index -= 1);
+                thumb[0].classList.remove('effect');
+                setTimeout(() => {
+                    prev_small_slide();
+                }, 0);
+                
+            }); 
+        // -----slides-small
+        const thumb = document.querySelectorAll('.thumb');
+        let thumbArray = [];
+        for(let i=0; i<thumb.length; i++){
+            thumbArray[i] = thumb[i].innerHTML;
+        }
+        function next_small_slide(){
+            let change = thumbArray.shift();
+            thumbArray.push(change);
+            for(let i=0; i<thumb.length;i++){
+                thumb[i].innerHTML = thumbArray[i];
+            }
+            thumb[1].classList.remove('effect');
+        }
+        function prev_small_slide() {
+            let change = thumbArray.pop();
+            thumbArray.unshift(change);
+            for (let i = 0; i < thumb.length; i++) {
+                thumb[i].innerHTML = thumbArray[i];
+            }
+            thumb[0].classList.add('effect');
+        }      
+    </script>
+</body>
+</html>

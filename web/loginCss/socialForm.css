@@ -1,0 +1,19 @@
+.social-network-form{
+    bottom: 0;
+    right: 1.5vw;
+    position: absolute;
+    float: right;
+    width: (10*4+40*4)px;
+    height: 100px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+}
+.social-img{
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,148 @@
+.break-bottom{
+    border: 5px solid #a27b3e;
+    width: 100%;
+    height: 35px;
+    /* position: relative; */
+    /* top: -70px; */
+    z-index: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+#break-bottom1{
+    border: 9px solid transparent;
+}
+.enroll-layout{
+    width: 100%;
+    height: 650px;
+    /* border: 2px solid black; */
+    margin-top: 50px;
+}
+.enroll-box{
+    width: 60%;
+    margin: auto;
+    margin-top: 75px;
+}
+h4{
+    text-align: center;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    color: #b69539;
+}
+.enroll-content{
+    margin-top: 40px;
+    padding-bottom: 15px;
+    font-family: "Avenir LT" ,sans-serif;
+    display: block;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+/* ----------------content-enroll------------------------------------- */
+
+.content-enroll-box{
+    margin-right: 4%;
+    width: 47%;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.content-enroll-box .content-enroll .content-enroll-text{
+    font-size: 15px;
+    color: #b69539;
+    font-family: "Avenir LT" ,sans-serif;
+}
+.value-box, #seclect-country{
+    width: 100%;
+    height: 40px;
+}
+.value-box input, .value-box select{
+    padding-left: 8px;
+    white-space: nowrap;
+    width: 90%;
+    border: 5px solid #b69539;
+    border-top: none;
+    border-bottom: none;
+    border-right: 2px;
+    background-color: #ece8e1;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: "Avenir LT" ,sans-serif;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    -webkit-appearance: none;
+}
+.warning-content{
+    font-size: 12px;
+    color: #a20000;
+    visibility: hidden;
+}
+.content-enroll-box:nth-child(9){
+    width: 96.3%;
+}
+.content-enroll-box:nth-child(even){
+    margin-right: 0px;
+}
+.check-box input{
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    overflow: visible;
+    
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    text-align: start;
+}
+.check-box span{
+    font-family: "Avenir LT" ,sans-serif;
+    font-size: 12px;
+}
+.check-box a{
+    width: 100%;
+    text-decoration: none;
+    color: #b69539;
+    transition: all 0.2s ease-in-out;
+}
+
+/* ----------submit button------------------ */
+
+.submit-layout{
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height: 45px;
+}
+/* .submit-layout submit-box{
+    width: 100%;
+    height: 45px;
+} */
+.submit-layout input{
+    width: 175px;
+    height: 100%;
+    position: absolute;
+    right: 10px;
+}
+.submit-layout input{
+    -webkit-appearance: none;
+    padding: 0 40px;
+    width: auto;
+    border: 2px solid #00a4d0;
+    border-radius: 40px;
+    font-family: "Avenir LT",sans-serif;
+    font-size: 18px;
+    line-height: 34px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #00a4d0;
+    cursor: pointer;
+    text-align: center;
+    background: 0;
+    transition: all .3s ease-out;
+}
+.submit-layout input:hover{
+    color: white;
+    background-color: #00a4d0;
+}

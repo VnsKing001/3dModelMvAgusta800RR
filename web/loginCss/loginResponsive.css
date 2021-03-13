@@ -1,0 +1,7 @@
+@media all and ( max-width:1150px) {
+    .login-container,
+    .forgot-account-container{
+        top: 50%;
+        left: 50%;
+    }
+}

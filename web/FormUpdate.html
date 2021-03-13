@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start-3</title>
+    <link rel="stylesheet" href="css/formUpdate.css">
+</head>
+
+<body>
+    <div class="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>
+                We work on the shores of lake Varese, with the breathtaking scenery of the Alps in the background. Here we handcraft our legendary motorcycles.
+            </p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="img-background">
+                    <div class="container-img"></div>
+                </div>
+                <div class="social-box">
+                    <div class="social-icon">
+                        <div class="icon-image">
+                            <img src="/img/facebook-d.png" alt="">
+                        </div>
+                        <span>Facebook</span>
+                    </div>
+                    <div class="social-icon">
+                        <div class="icon-image">
+                            <img src="/img/instagram1.png" alt="">
+                        </div>
+                        <span>Instagram</span>
+                    </div>
+                    <div class="social-icon">
+                        <div class="icon-image">
+                            <img src="/img/youtube-d.png" alt="">
+                        </div>
+                        <span>Youtube</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contactForm" id='contactForm'>
+                <form id="contactForm1Form">
+                    <h2>MV-REGISTER</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="">
+                        <span>Username</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" name="" required="">
+                        <span>Password</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="">
+                        <span>Full name</span>
+                    </div>
+                    <div class="inputBox submitButton">
+                        <input type="button" name="" value="Next" onclick="toAnotherForm()">
+                    </div>
+                </form>
+            </div>
+            <div class="contactForm" id="contactForm2">
+                <form id="contactForm2Form">
+                    <div class="back-to-before">
+                        <div class="back-to-before-ct">
+                            <p onclick="toBeforeForm()">Back</p>
+                        </div>
+                    </div>
+                    <h2>MV-REGISTER</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox checkBoxForm">
+                        <input type="checkbox">
+                        <p>Accept our <p class="ourRules">policies*</p></p>
+                    </div>
+                    <div class="inputBox checkBoxForm">
+                        <input type="checkbox">
+                        <p>Accept our<p class="ourRules">private rules*</p></p>
+                    </div>
+                    <div class="inputBox submitButton" >
+                        <input type="submit" name="" value="Create">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toAnotherForm() {
+            document.getElementById('contactForm2').style.transform = "translateX(0)";
+            document.getElementById('contactForm1Form').style.opacity= 0;
+        }
+        function toBeforeForm(){
+            document.getElementById('contactForm2').style.transform = "translateX(480px)";
+            document.getElementById('contactForm1Form').style.opacity = 1;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+.contact {
+  position: relative;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(119, 144, 165); */
+  background: radial-gradient(circle at top left, #616161 0%, #9bc5c3 70%);
+  
+}
+
+.contact .content {
+  position: absolute;
+  top: 12px;
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact .content h2 {
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-size: 50px;
+  font-weight: 500;
+  color: white;
+}
+.contact .content p {
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+}
+.container {
+  position: relative;
+  top: 15px;
+  width: 83%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+  margin-top: 30px;
+  background-color: #666;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px -3px gray;
+}
+.img-background{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.container-img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position:-190% 0%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/2020-mv-agusta-superveloce-ottocento.jpg);
+}
+.container .contactInfo {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-box{
+    position: absolute;
+    left: 15px;
+    width:250px;
+    height:240px;
+    bottom: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social-icon{
+    width:100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+}
+
+.icon-image{
+    width: 73px;
+    height: 73px;
+    border-radius: 50%;
+    /* border: 3px solid white; */
+}
+.icon-image img{
+  width: 60px;
+  position: relative;
+  left: 12px;
+}
+
+.social-icon span{
+    display: flex;
+    padding-left: 10px;;
+    align-items: center;
+    color: black;
+    font-weight: 600;
+}
+
+
+.contactForm,.contactForm-2 {
+  z-index: 10;
+  height: 100%;
+  width: 475px;
+  padding: 40px;
+  background: #fff;
+}
+.contactForm h2 {
+  margin: 35px;
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+.contactForm .inputBox {
+  align-items: center;
+  /* justify-content: center; */
+  width: 90%;
+  margin-top: 10px;
+}
+/* .inputBox:nth-child(6) {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 10px;
+} */
+.contactForm form {
+  position: relative;
+  top: -10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+}
+.contactForm .inputBox input {
+  width: 100%;
+  padding: 5px 0;
+  padding-left: 3px;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+.contactForm .inputBox span {
+  position: relative;
+  left: 0;
+  top: -30px;
+  padding: 5px 1px;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.25s ease;
+  color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+  color: transparent;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"],
+.contactForm .inputBox input[type="button"] {
+  outline: none;
+  width: 100px;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+.contactForm .inputBox input[type="submit"]:nth-child(1){
+  position: relative;
+  top: 20%;
+}
+.submitButton{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#contactForm2{
+  transition: 0.2s ease-in-out;
+    position: absolute;
+    right:0;
+    z-index: 20;
+    transform: translateX(480px);
+    background-color: white;
+}
+.checkBoxForm{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+.checkBoxForm input{
+  height: 20px;
+  width: 20px;
+  margin: 0;
+  padding: 0;
+}
+.checkBoxForm p{
+  margin-left: 10px;
+  color: #666;
+  font-size: 15px;
+}
+.checkBoxForm .ourRules{
+  color: #b69539;
+  letter-spacing: normal;
+  white-space: normal;
+  cursor: pointer;
+}
+.contactForm .inputBox input[type="checkBox"]{
+  width:20px;
+}
+.back-to-before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 20px;
+  color: #00bcd4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #616161; */
+  /* width: 100px; */
+  /* height: 100px; */
+}
+.back-to-before-ct{
+  width: 90%;
+}
+.back-to-before p{
+  cursor: pointer;
+  z-index: 10;
+}
