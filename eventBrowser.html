@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="record" style="border: 1px solid red; width: 100%; height: 600px;">
+        aasakjajskj
+    </div>
+    <script>
+        let count = 0;
+        function checkCheat() {
+            this.count = count++;
+            if(this.count < 5){
+                alert("fuck you! Cheater! " + count);
+            }else{
+                alert("You're Disqualified!");
+                document.querySelector("#record").style.display= "none";
+                document.querySelector('body').style.background= "black";
+            }
+
+        }
+        document.querySelector("#record").addEventListener("mouseleave", checkCheat);
+    </script>
+</body>
+
+</html>
