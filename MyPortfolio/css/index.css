@@ -1,0 +1,723 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 18px;
+  font-family: "be vietnam medium", Arial, Helvetica, sans-serif;
+}
+@font-face {
+  font-family: Anton;
+  src: url("../font/Anton-Regular.ttf");
+}
+@font-face {
+  font-family: Bebas Neue;
+  src: url("../font/BebasNeue-Regular.ttf");
+}
+@font-face {
+  font-family: Questrial;
+  src: url("../font/Questrial-Regular.ttf");
+}
+@font-face {
+  font-family: be vietnam med;
+  src: url("../font/beVietnam/BeVietnam-Medium.ttf");
+}
+@font-face {
+  font-family: be vietnam bol;
+  src: url("../font/beVietnam/BeVietnam-Bold.ttf");
+}
+@font-face {
+  font-family: be vietnam light;
+  src: url("../font/beVietnam/BeVietnam-Light.ttf");
+}
+body {
+  /* background-color: #161616; */
+  background-color: #222222;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: black;
+  border-radius: 5px;
+  overflow: hidden;
+}
+body::-webkit-scrollbar-thumb {
+  /* background: hsla(54, 100%, 50%, 0.8); */
+  /* background-color: #737373; */
+  background-color: #00fa9a;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  overflow: hidden;
+}
+body::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+.layout-hd {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.port-nav {
+  top: 0;
+  width: 100%;
+  height: 75px;
+  position: -webkit-sticky;
+  position: fixed;
+  /* background-color: #222222; */
+  top: 0;
+  z-index: 100;
+  transition: 0.2s ease;
+}
+.nav__sticky {
+  background-color: #222222;
+  filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.3));
+  height: 65px;
+}
+.nav-layout {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.nav-tags {
+  margin-left: 15vw;
+}
+.nav-tags a {
+  padding: 0 22px;
+  color: white;
+  font-family: "Questrial";
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.my-logo {
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  height: 80%;
+}
+.menu-bt-layout {
+  position: absolute;
+  right: 15px;
+}
+.menu-bt {
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+.menu-bt span {
+  background-color: #f1f1f1;
+}
+.menu-bt span:first-child {
+  width: 100%;
+  height: 1px;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+.menu-bt span:nth-child(2) {
+  width: 75%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.menu-bt span:nth-child(3) {
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+/* ----------header------------------- */
+.port-header {
+  width: 100%;
+  height: 100vh;
+  background-color: #222222;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-container {
+  width: 96%;
+  height: 100%;
+  max-height: 400px;
+  max-width: 1100px;
+  /* background-color: #1616166e; */
+  border-radius: 30px;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.sp-introduce {
+  /* height: 100%; */
+}
+.sp-introduce h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 50px;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+  position: relative;
+}
+.sp-introduce h1 span {
+  color: #00ff7f;
+  font-size: 20px;
+  position: absolute;
+  top: 12px;
+  padding-left: 10px;
+}
+
+.sp-hello {
+  top: 0;
+  width: 150px;
+  height: 45px;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 20px;
+  background-color: #00fa9a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: 600;
+}
+.j-intro {
+  display: inline-block;
+  margin: 20px 0;
+  color: whitesmoke;
+  font-size: 25px;
+}
+.sp-introduce p {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.sp-introduce p:first-child {
+  margin-top: 10px;
+  font-size: 17px;
+}
+.sp-introduce p img {
+  margin-right: 10px;
+}
+.sp-background {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 80px;
+}
+.sp-background img {
+  height: 240px;
+  width: 240px;
+  z-index: 3;
+}
+.sp-background .border-neon {
+  width: 100%;
+  height: 100%;
+  border: 5px solid #66cd95;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  transform: scale(1.5);
+  /* background: rgba(196, 196, 196, 0.39); */
+  box-sizing: border-box;
+  box-shadow: inset 280px 0px 20px rgba(154, 174, 186, 0.2);
+}
+.sp-background .inner-neon {
+  width: 100%;
+  height: 100%;
+  border: 5px solid aqua;
+  position: absolute;
+  transform: scale(1.5);
+  border-radius: 50%;
+  z-index: 2;
+  background: rgba(102, 205, 170, 0.5);
+  filter: blur(150px);
+}
+.svg-header {
+  width: 100%;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+/* -------------------- port-skill---------------*/
+.about-skill {
+  width: 100%;
+  height: 100vh;
+  max-width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-container {
+  width: 96%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-container img {
+  height: 75%;
+}
+
+.about-card h2 {
+  color: white;
+  font-family: "be vietnam light";
+  font-size: 40px;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+.about-card h2::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background-color: #20b2aa;
+  bottom: 0;
+  left: 100%;
+  margin-left: 5px;
+}
+.about-card p {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: "be vietnam med";
+  max-width: 450px;
+  color: white;
+}
+.about-card a {
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: #20b2aa;
+  border-radius: 45px;
+  color: white;
+  border: 2px solid #20b2aa;
+  margin-top: 15px;
+}
+.about-card a:hover {
+  background-color: transparent;
+  color: #20b2aa;
+}
+
+.about-tags {
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+  max-width: 460px;
+  flex-wrap: wrap;
+}
+.a-tag {
+  min-width: 100px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid #00fa9a;
+  margin: 7px 7px 7px 0;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+/* -----------------------port wid--------------- */
+.port-wid {
+  width: 100%;
+}
+.wid-container {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.wid-container h2 {
+  color: white;
+  font-family: "be vietnam light";
+  font-size: 40px;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+.wid-container .wid-tags {
+  width: 96%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.wid-tags .wid-tag {
+  padding: 100px 10px 10px 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.wid-tag img {
+  height: 45px;
+}
+.wid-tag h3 {
+  color: white;
+  font-size: 36px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.wid-tag p {
+  max-width: 300px;
+  color: #737b7d;
+}
+/* -------------port-skill---------------------- */
+.port-skill {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.skill-container {
+  width: 96%;
+  padding: 50px;
+}
+
+.sc-header {
+  position: relative;
+}
+.sc-header strong {
+  font-size: 250px;
+  color: #373737;
+}
+.sc-header h2 {
+  position: absolute;
+  top: 48.5%;
+  padding-left: 14vw;
+  color: white;
+  font-size: 100px;
+}
+.sc-body {
+  width: 96%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+
+.skill-tech h3 {
+  font-size: 40px;
+  color: white;
+  position: relative;
+}
+.skill-tech h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 105%;
+  height: 2px;
+  background-color: #00fa9a;
+}
+.skill-tech section {
+  margin-top: 20px;
+}
+.skill-tech section h4 {
+  font-size: 30px;
+  color: white;
+  font-family: "be vietnam light";
+}
+.skill-tech section div {
+  padding: 10px 0;
+}
+.skill-tech section div span {
+  padding: 10px 20px;
+  min-width: 100px;
+  color: #00fa9a;
+}
+/* ------------.....HIRE-------------- */
+.port-hire {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 150px 10vw;
+}
+.port-hire h2 {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 50px;
+}
+.hire-container {
+  width: 96%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.hire-tag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 30px;
+  padding-top: 60px;
+  width: 310px;
+}
+.hire-tag:nth-child(odd) {
+  filter: drop-shadow(7px -5px 2px rgba(13, 231, 74, 0.3));
+}
+.hire-tag:nth-child(even) {
+  filter: drop-shadow(7px 7px 2px rgba(13, 231, 74, 0.2));
+}
+.hire-tag img {
+  height: 50px;
+}
+.hire-tag h3 {
+  margin-top: 10px;
+  color: white;
+  font-size: 27px;
+}
+.hire-tag span {
+  font-size: 20px;
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.9);
+}
+.hire-tag strong {
+  color: #08c47c;
+  font-size: 50px;
+  margin: 20px 0;
+}
+.hire-tag p {
+  color: #737b7d;
+  font-size: 20px;
+}
+.hire-tag a {
+  padding: 7px 50px;
+  border: 2px solid #20b2aa;
+  font-size: 25px;
+  border-radius: 20px;
+  color: #20b2aa;
+  margin: 25px 0;
+  transition: 0.1s ease;
+}
+.hire-tag a:hover {
+  background-color: #20b2aa;
+  color: white;
+}
+.skill-tech section a {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid aqua;
+  border-radius: 15px;
+  color: white;
+  margin-top: 20px;
+  background: linear-gradient(90deg, transparent 50%, aqua 50%);
+  background-size: 200%;
+  background-position: left;
+  transition: 0.2s ease;
+}
+.skill-tech section a:hover {
+  background-position: right;
+  color: black;
+}
+.skill-tech section a span {
+  font-size: 25px;
+}
+/* --------------edi- work-------------- */
+.port-eduWork {
+  padding-top: 50px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: auto;
+  position: fixed;
+  z-index: 10000;
+  background-color: #222222;
+  display: none;
+}
+.eduWork-container {
+  width: 96%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ew-lt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ew-header {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.ew-tag {
+  width: 100%;
+  min-height: 150px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #2a2a2a;
+  margin: 5px 0;
+}
+.ew-tag strong {
+  color: white;
+  font-size: 18px;
+}
+.ew-tag strong span {
+  color: #2d9c8d;
+}
+/* ------------port-contact----------- */
+
+.port-contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+  background: url(../img/world.jpg);
+  box-shadow: 0px 4px 90px 47px rgba(0, 0, 0, 0.75),
+    inset 2000px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.contact-container {
+  width: 96%;
+  max-width: 1100px;
+}
+.contact-tags {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contact-tag {
+  background-color: #222222;
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+.circle {
+  border-radius: 50%;
+}
+.contact-ic {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  border: 1px solid #3c7c81;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-tag strong {
+  margin-top: 20px;
+  color: white;
+  font-size: 20px;
+}
+.contact-tag p {
+  margin-top: 40px;
+  color: white;
+  font-size: 18px;
+}
+
+.contact-f-lt {
+  margin-top: 100px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+}
+.contact-form {
+  max-width: 400px;
+}
+.nm-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.nm-name input {
+  width: 48%;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid #7c7b7f;
+}
+.contact-form > input {
+  margin: 5px 0;
+  width: 100%;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid #7c7b7f;
+}
+.message-ip {
+  width: 100%;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid #7c7b7f;
+}
+.contact-form > input[type="submit"] {
+  background-color: transparent;
+  color: #00ff7f;
+  border: 1px solid #00ff7f;
+  border-radius: 10px;
+  width: 200px;
+  margin-top: 20px;
+}
+.map-cc {
+  width: 350px;
+  height: 100%;
+  background-color: #222222;
+}
+.map-cc,
+.contact-form {
+  margin: 0 20px;
+}
+/* -------------footer-------------- */
+.port-footer {
+  width: 100%;
+  height: 80px;
+  background-color: #222222;
+  box-shadow: 0px -5px 3px #08c47c;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.port-footer section {
+  display: flex;
+  align-items: flex-end;
+}
+.port-footer p {
+  color: white;
+  padding: 5px;
+}
+.port-footer img {
+  height: 50px;
+}
