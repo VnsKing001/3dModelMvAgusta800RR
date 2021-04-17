@@ -1,0 +1,90 @@
+.footer-image{
+    position: relative;
+    background-image: url(../img/bg-pageendnavigation-dark.svg);
+    height: 830px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+}
+/* -----------heading=-------------------- */
+.footer-image .heading-footer{
+    position: absolute;
+    margin: auto;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.footer-image h3, .footer-image p{
+    
+    text-align: center;
+    display: block;
+    
+}
+.footer-image h3{
+    font-size: 50px;
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: 6px;
+    font-family: "Avenir LT",sans-serif;
+    color: white;
+}
+.footer-image p{
+    margin-top: 10px;
+    letter-spacing: 6px;
+    color: #b69539;
+}
+/* -----------left-contact-------------------- */
+.left-contact{
+    margin-top: 50px;
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    width: 500px;
+    height: 300px;
+}
+.left-contact .left-img{
+    margin-left: 30%;
+    width: 40%;
+    left: 65%;
+    background-image: url(../img/maps-and-location.png);
+    color: #b69539;
+    height: 70%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.left-contact h5, .right-contact h5{
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Avenir LT",sans-serif;
+    font-size: 28px;
+    line-height: 28px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: 3px;
+}
+.left-contact p, .right-contact p{
+    margin-top: 20px;
+    font-size: 19px;
+    letter-spacing: 2px;
+}
+/* ----------------right-contact---------------- */
+.right-contact{
+    margin-top: 50px;
+    position: absolute;
+    top: 50%;
+    right: 14%;
+    width: 500px;
+    height: 300px;
+}
+.right-contact .right-img{
+    margin-left: 30%;
+    width: 40%;
+    left: 65%;
+    background-image: url(../img/business.png);
+    color: #b69539;
+    height: 70%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

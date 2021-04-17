@@ -1,0 +1,44 @@
+/* ----------open more----------------- */
+
+
+.open-more{
+    bottom: 4px;
+    width: 100%;
+    /* margin: auto; */
+    text-align: center;
+    position: fixed;
+    opacity: 1;
+    
+}
+
+.open-more a{
+    color: hsla(54, 100%, 50%, 0.8);
+    font-size: 20px;
+    text-decoration: none;
+}
+.open-more a::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background: hsla(54, 100%, 50%, 0.8);
+    display: block;
+    margin: auto;
+}
+.open-more:hover a::after{
+    width: 345px;
+    transition: 0.25s linear;
+}
+#top-angle-icon{
+    opacity: 0;
+    position: fixed;
+    right: 100px;
+    bottom: 75px;
+    transition: 0.5s linear;
+    z-index: 100;
+}
+#open-close-content{
+    transition: 0.5s linear;
+}
+#angle-top{
+    transition: 0.5s linear;
+}

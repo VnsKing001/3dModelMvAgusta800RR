@@ -1,0 +1,62 @@
+/* ------------banner------------------------- */
+.banner{
+    margin: 70px 115px;
+    font-size: 25px;
+    color: white;
+    width: 600px;
+}
+.banner-content{
+    margin: 25px 0px 0px 0px;
+    width: 450px;
+}
+.banner-title span{
+    font-size: 75px;
+    color: hsla(54, 100%, 50%, 0.8);
+}
+.explore{
+    left: 0px;
+}
+.explore a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.85);
+}
+.yellow-content{
+    color:hsla(54, 100%, 50%, 0.8);
+}
+
+
+/* -------------notifications------------------ */
+.notification{
+    border: 2px solid hsla(54, 100%, 50%, 0.35);
+    position: relative;
+    width: 303px;
+    left: 120px ;
+    top: -45px;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 99;
+    height: 152px;
+}
+.notification-img{
+    margin-left: +62px;
+    width: 100%;
+    height: 125%;
+    background-image: url(../img/D3_RRMY20_A_0005.png);
+    opacity: 1;
+    background-size: cover;
+}
+.landscape{
+    transform: scaleX(-1);
+    position: absolute;
+    background-image: url(../img/landscape.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.1),
+                                      rgba(0,0,0,0.2)),
+                                      url(../img/landscape.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.notification-img, .landscape{
+    -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(0, 6, 0, 0.5));
+}
+

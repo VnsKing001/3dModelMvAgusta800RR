@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body, h1{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: black;
+}
+h1{
+    background: whitesmoke;
+}
+.text-container h1{
+    font-size: 150px;
+    text-align: center;
+    color: rgba(225, 225, 225, .1);
+    background-image: url(../img/1.png);
+    background-repeat: repeat-x;
+    -webkit-background-clip: text;
+    animation: slide 4s linear infinite;
+}
+@keyframes slide{
+    0%{
+        background-position: left 0px top 40px;
+    }
+    100%{
+        background-position: left 512px top 40px;
+    }
+}
+.text-container{
+    margin-top: 34vh;
+}

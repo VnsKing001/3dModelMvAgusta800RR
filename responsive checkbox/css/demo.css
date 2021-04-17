@@ -1,0 +1,11 @@
+.cb{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #EEE;
+    border: 1px solid#999;
+    border-radius: 1px;
+    /* border-radius: 100%; */
+    transition: background 0.2 linear;
+    cursor: pointer;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/demo.css">
+</head>
+<body>
+    <div class="cb" id="cb1" data-checked="0" onclick="toggleCB(this)"></div> CB1
+    <br><br>
+    <div class="cb" id="cb2" data-checked="0" onclick="toggleCB(this)"></div> CB2
+    <br><br>
+    <button onclick="submitValues()">Submit</button>
+    <script>
+        function submitValues(){
+            alert("ab1= "+ cb1.dataset.checked+"     cb2 = "+ cb2.dataset.checked);
+        }
+        function toggleCB(cb){
+            if(cb.dataset.checked == 0){
+                cb.style.background = "#89d414";
+                cb.dataset.checked = 1;
+            } else {
+                cb.style.background= "#eee"
+                cb.dataset.checked = 0;
+            }
+        }
+    </script>
+</body>
+</html>
