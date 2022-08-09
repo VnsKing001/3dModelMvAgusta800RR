@@ -5,7 +5,7 @@ function logginForm(){
 function gotofpt(){
     alert("Ở đây chúng tôi không có làm vậy!!!");
 }
-var countDate = new Date('aug 23, 2022 00:00:00').getTime();
+var countDate = new Date('Aug 23, 2022 00:00:00').getTime();
 function deadlineDay(){
     var now = new Date().getTime();
     gap = countDate - now;
